@@ -1,0 +1,46 @@
+* {
+    margin:0;
+    padding:0;
+    border:0;
+  }
+
+body {
+    font-family: Figtree, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+
+.menulist {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.menulist h2 {
+    padding: 10px 20px;
+    font-weight: 200;
+    text-align: center;
+    display: inline-flex;
+    border-right: 2px solid #000;
+}
+
+.menulist li {
+    padding: 20px 20px;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.menulist a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menulist a:hover {
+    color: #616161;
+}
+
+.menulist .active {
+    font-weight: 600;
+}

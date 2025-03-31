@@ -27,5 +27,5 @@ Target Audience:
 
 In order to keep each game consistent and simplistic but also professional and eyecatching. I opted for a neutral green and white contrast for the background and navbar.
 
-The primary colours are '#1BB295', '#FFFFFF' and '#000000'
+The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
