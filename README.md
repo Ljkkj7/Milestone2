@@ -29,3 +29,7 @@ In order to keep each game consistent and simplistic but also professional and e
 
 The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
+### External Code
+
+Background opacity dimming
+- https://stackoverflow.com/questions/2503907/placing-an-background-image-with-padding-in-h2-tag

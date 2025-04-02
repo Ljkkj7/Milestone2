@@ -1,0 +1,234 @@
+* {
+    margin:0;
+    padding:0;
+    border:0;
+  }
+
+body {
+    font-family: Figtree, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+
+.menulist {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.navlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    background-color: #ffffff;
+    height: 100px;
+}
+
+.logo {
+    display: inline-flex;
+}
+
+#logoImage {
+    width: 200px;
+    height: 125px;
+}
+
+.menulist li {
+    padding: 45px 45px 45px 20px;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.menulist a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    margin: 0px 0px 0px 0px;
+}
+
+.menulist a:hover, .menulist a:active {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 0px 16px 0px 16px;
+    transition: 0.6s;
+    
+}
+
+.menulist .active {
+    font-weight: 600;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    background-color: #ffffff;
+    border-top: 2px solid #000;
+}
+
+.footer {
+    border-radius: 20px;
+    border: 2px solid #000;
+    padding: 5px 0px 5px 0px;
+    max-width: fit-content;
+}
+
+.footer p {
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+    font-size: 20px;
+}
+
+.footer .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px 5px 0px;
+    font-weight: 600;
+}
+
+.footer .socials a {
+    text-decoration: none;
+    color: #000000;
+    padding: 0px 10px 0px 10px;
+}
+
+.footer .socials a:hover, .footer .socials a:active {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 0px 16px 0px 16px;
+    transition: 0.6s;
+}
+
+.contents {
+    background-color: #1bb2946b;
+}
+
+.contents h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.gameContents h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 20px;
+}
+
+.gameContents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
+}
+
+.gameContents p {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 20px;
+}
+
+#simon {
+    background-image: url(assets/images/simonBG.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+}
+
+#letterbox {
+    background-image: url(assets/images/letterboxedBG.png);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+}
+
+.mainContents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 0px 40px 0px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #000;
+}
+
+.playButton {
+    background-color: #1bb29486;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px 40px 20px 40px;
+    margin-top: 10px;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.playButton:hover, .playButton:active {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.6s;
+}
+
+.suggestContents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 0px 40px 0px;
+    background-color: #ffffff;
+}
+
+.suggestContents h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.suggestionParagraph {
+    font-size: 20px;
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+}
+
+.suggestContents p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.suggestButton {
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px 40px 20px 40px;
+    margin-top: 10px;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.suggestButton:hover, .suggestButton:active {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.6s;
+}

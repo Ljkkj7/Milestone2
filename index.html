@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">     
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/58a80762a1.js" crossorigin="anonymous"></script>     
     <title>KJ Games</title>
-    <link rel="stylesheet" href="assets/styles.css">    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="brands.min.css"    
 </head>
 <body>
     <header>
@@ -26,21 +28,36 @@
         </div>
     </header>
     <div class="contents">
-        <div class="gameContents">
+        <div class="mainContents">
+            <h1>Welcome to KJ Games!</h1>
+            <p>Explore our collection of fun and challenging games. Click on any game to start playing!</p>
+            <p>We are constantly updating our games, so check back often for new challenges!</p>
+        </div>
+        <div class="gameContents" id="simon">
             <h1>Simon Says</h1>
             <p>Head on to Simon Says, a memory game where you can test your recollection and problem-solving skills. Try to remember the longest sequence provided!</p>
             <a href="simon.html" class="playButton">Play Now</a>
         </div>
-        <div class="gameContents">
+        <div class="gameContents" id="letterbox">
             <h1>LetterBoxed</h1>
             <p>LetterBoxed is a word puzzle game where you can test your vocabulary and word formation skills. Try to create the longest words possible!</p>
             <a href="letterbox.html" class="playButton">Play Now</a>
         </div>
+        <div class="suggestContents">
+            <h1>Suggestions</h1>
+            <div class="suggestionParagraph">
+                <p>We value your feedback and suggestions!</p>
+                <p>If you have any ideas for new games or features, please let us know!</p>
+                <p>We are always looking to improve and add new content to our site.</p>
+            </div> 
+            <a href="letterbox.html" class="suggestButton">Contact Us!</a>
+        </div>
     </div>
     <footer>
         <div class="footer">
-            <p>&copy; 2025 KJ Games.</p>
-            <p>Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+            <p class="copy">&copy; 2025 KJ Games.</p>
+            <p>Follow us on </p>
+            <p class="socials"><a href="https://x.com/?lang=en" target="_blank">Twitter</a> | <a href="https://www.facebook.com" target="_blank">Facebook</a> | <a href="https://www.instagram.com" target="_blank">Instagram</a> | <a href="https://github.com" target="_blank">Github</a></p>
         </div>
     </footer>
 </body>
