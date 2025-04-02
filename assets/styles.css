@@ -11,6 +11,7 @@ body {
 .navbar {
     width: 100%;
     border-bottom: 2px solid #000;
+    background-color: rgba(128, 128, 128, 0.185);
 }
 
 .menulist {
@@ -18,16 +19,17 @@ body {
     display: inline-flex;
 }
 
-.menulist h2 {
-    padding: 10px 20px;
-    font-weight: 200;
-    text-align: center;
+.logo {
     display: inline-flex;
-    border-right: 2px solid #000;
+}
+
+#logoImage {
+    width: 200px;
+    height: 125px;
 }
 
 .menulist li {
-    padding: 20px 20px;
+    padding: 45px 45px 45px 20px;
     display: inline-flex;
     text-decoration: none;
 }
@@ -35,12 +37,63 @@ body {
 .menulist a {
     text-decoration: none;
     color: #000000;
+    font-size: 25px;
+    margin: 0px 0px 0px 0px;
 }
 
-.menulist a:hover {
-    color: #616161;
+.menulist a:hover, .menulist a:active {
+    color: #000000;
+    font-weight: 600;
+    background-color: #1bb29486;
+    border-radius: 10px;
+    padding: 0px 16px 0px 16px;
+    transition: 0.6s;
+    
 }
 
 .menulist .active {
     font-weight: 600;
+    border-left: 2px solid #000;
+    padding-left: 40px;
+}
+
+.contents {
+    background-color: #1bb29486;
+}
+
+.contents h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.gameContents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
+}
+
+.gameContents p {
+    font-size: 20px;
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+}
+
+.playButton {
+    background-color: #1bb29486;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px 40px 20px 40px;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.playButton:hover, .playButton:active {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.6s;
 }
