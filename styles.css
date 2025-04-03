@@ -253,8 +253,11 @@ footer {
 }
 
 .container {
-    position: relative;
     display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 40px 0px;
 }
 
 .container h1 {
@@ -338,7 +341,7 @@ footer {
     font-size: 3em;
 }
 
-.button {
+.simonButton {
     display: flexbox;
     flex-direction: column;
     background-color: #1bb29486;
@@ -354,7 +357,7 @@ footer {
     border: 2px solid #000000;
 }
 
-.button:hover {
+.simonButton:hover {
     color: #ffffff;
     background-color: #000000;
     transition: 0.6s;
@@ -451,6 +454,7 @@ footer {
 
     .menulist.show {
         display: flex !important;
+        position: absolute;
         width: 75%;
         left: 12.5%;
     }
@@ -467,5 +471,55 @@ footer {
         background-color: #ffffff00;
         color: #000000;
         transition: 0.6s;
+    }
+
+    .circlecontainer {
+        height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .circle {
+        border: 2px solid black;
+        height: 300px;
+        width: 300px;
+    }
+
+    .circle2 {
+        height: 240px;
+        width: 240px;
+        top: 30px;
+        left: 30px;
+    }
+
+    .circle3 {
+        height: 180px;
+        width: 180px;
+        top: 60px;
+        left: 60px;
+    }
+
+    .circle4 {
+        height: 120px;
+        width: 120px;
+        top: 90px;
+        left: 90px;
+    }
+
+    .scorebox {
+        border: 2px solid black;
+        height: 60px;
+        width: 60px;
+        top: 120px;
+        left: 120px;
+        font-size: 1.5em;
+        position: absolute;
+    }
+
+    .simonButton {
+        height: 30px;
+        width: 120px;
+        font-size: 1em;
+        margin: 5% auto;
     }
 }
