@@ -389,7 +389,7 @@ footer {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 20px 0px 40px 0px;
+    padding: 40px 0px 40px 0px;
     border-bottom: 2px solid #000;
 }
 
@@ -468,8 +468,10 @@ footer {
 
     .menulist.show {
         display: flex !important;
+        position: absolute;
         width: 50%;
         left: 25%;
+        z-index: 2;
     }
 
     .menulist li {
@@ -516,6 +518,7 @@ footer {
         position: absolute;
         width: 75%;
         left: 12.5%;
+        z-index: 2;
     }
 
     .menulist li {

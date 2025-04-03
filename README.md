@@ -29,6 +29,11 @@ In order to keep each game consistent and simplistic but also professional and e
 
 The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
+### Bug Fixes
+
+Bug 001 - NavBar Hamburger was overlaying onto main content 
+Bug Fix 001 - Used a Z-index of greater than 1 to force NavBar above main content
+
 ### External Code
 
 [Background opacity dimming](https://stackoverflow.com/questions/2503907/placing-an-background-image-with-padding-in-h2-tag)
