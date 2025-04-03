@@ -440,8 +440,17 @@ footer {
     font-size: 50px;
     text-align: center;
     padding: 20px 10px 20px 10px;
-    margin: 20px 0px 20px 0px;
     border-bottom: 2px solid #000;
+    background-color: #1bb29486;
+}
+
+.gameTitle h1 {
+    animation: contact-zoom 1s forwards;
+}
+
+.gameTitle p {
+    animation: contact-zoom 1s forwards;
+    padding-bottom: 20px;
 }
 
 .gameContainer h2 {
@@ -458,7 +467,7 @@ footer {
     margin: 20px 0px 20px 0px;
 }
 
-.details .attempts {
+.details p {
     padding-top: 20px;
 }
 
@@ -468,6 +477,24 @@ footer {
     padding: 5px 5px 5px 5px;
     margin: 0 auto 20px auto;
     text-align: center;
+}
+
+.details input:focus {
+    outline: none;
+    border: 2px solid #1bb29486;
+}
+
+.guessButton {
+    display: flex;
+    background-color: #1bb29486;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    margin: 0px auto 20px auto;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+    flex-direction: column;
 }
 
 .gameContent .wordBoxes{
@@ -488,7 +515,7 @@ footer {
     text-decoration: none;
 }
 
-.resetButton:active {
+.resetButton:active, .resetButton:hover, .guessButton:hover, .guessButton:active {
     background-color: #000000;
     color: #ffffff;
     transition: 0.6s;

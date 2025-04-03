@@ -41,14 +41,17 @@
             <div class="wordBoxes">
             </div>
             <div class="details">
-                <input type="text" class="guessInput" placeholder="Enter your guess here...">
+                <input type="text" id="guessInput" placeholder="Enter your guess here...">
+                <button class="guessButton">Guess</button>
                 <p class="hint">Hint: <span></span></p>
-                <p class="attempts">Attempts: 0/6</p>
+                <p class="attempts">Attempts: <span></span>/6</p>
+                <p class="wrongLetters">Wrong Letters: <span></span></p>
             </div>
             <button class="resetButton">Reset Game</button>
         </div>
     </div>
     <script src="assets/scripts/letterboxed.js"></script>
+    <script src="assets/scripts/words.js"></script>
     <footer>
         <div class="footer">
             <p class="copy">&copy; 2025 KJ Games.</p>
