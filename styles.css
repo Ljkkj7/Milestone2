@@ -14,7 +14,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 .menulist {
@@ -100,7 +99,7 @@ footer {
 
 .footer p {
     text-align: center;
-    padding: 5px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
     font-size: 20px;
 }
 
@@ -251,6 +250,134 @@ footer {
     background-color: #000000;
     color: #ffffff;
     transition: 0.6s;
+}
+
+.container {
+    position: relative;
+    display: flexbox;
+}
+
+.container h1 {
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container h2 {
+    font-weight: 200;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.circlecontainer {
+    position: relative;
+    display: flexbox;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.circle {
+    border: 2px solid black;
+    display: flexbox;
+    flex-direction: column;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.circle1 {
+    height: 500px;
+    width: 500px;
+    background-color: #009FE3;
+}
+
+.circle2 {
+    height: 400px;
+    width: 400px;
+    background-color: #445261;
+    top: 50px;
+    left: 50px;
+}
+
+.circle3 {
+    height: 300px;
+    width: 300px;
+    background-color: #EFB920;
+    top: 100px;
+    left: 100px;
+}
+
+.circle4 {
+    height: 200px;
+    width: 200px;
+    background-color: #23BBBB;
+    top: 150px;
+    left: 150px;
+}
+
+.scorebox {
+    border: 2px solid black;
+    border-radius: 25%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #E6ECF0;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    top: 210px;
+    left: 210px;
+    text-align: center;
+    color: #445261;
+    font-size: 3em;
+}
+
+.button {
+    display: flexbox;
+    flex-direction: column;
+    background-color: #1bb29486;
+    color: #000000;
+    border: 0;
+    height: 40px;
+    width: 160px;
+    border-radius: 5px;
+    margin: 40px auto 40px auto;
+    display: block;
+    position: relative;
+    font-weight: 600;
+    border: 2px solid #000000;
+}
+
+.button:hover {
+    color: #ffffff;
+    background-color: #000000;
+    transition: 0.6s;
+}
+
+.scorecontainer {
+    display: flexbox;
+    flex-direction: row;
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
+
+.score {
+    font-size: 1em;
+}
+
+.highscore {
+    display: inline-block;
+    font-size: 1em;
+}
+
+.light {
+    opacity: 0.2;
 }
 
 @media screen and (max-width: 768px) {

@@ -31,5 +31,33 @@
         </div>
     </header>
     <script src="assets/scripts/script.js"></script>
+    <div class="container">
+        <h1>Simon Says</h1>
+        <h2>Test your memory!</h2>
+    </div>
+    <div class="circlecontainer">
+        <div data-listener="false" class="circle circle1" id="button0"></div>
+        <div data-listener="false" class="circle circle2" id="button1"></div>
+        <div data-listener="false" class="circle circle3" id="button2"></div>
+        <div data-listener="false" class="circle circle4" id="button3"></div>
+        <div class="scorebox" id="score">0</div>
+    </div>
+    <div class="bottomcontainer">
+        <button class="button" onclick="newGame()">New Game</button>
+        <script src="scripts/game.js"></script>
+        <div id="score-container" class="scorecontainer">
+            <h3>Scores:</h3>
+        </div>
+        <div id="high-score-container" class="scorecontainer">
+            <h3 class="highscore">High Score:</h3>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <p class="copy">&copy; 2025 KJ Games.</p>
+            <p>Follow us on </p>
+            <p class="socials"><a href="https://x.com/?lang=en" target="_blank">Twitter</a> | <a href="https://www.facebook.com" target="_blank">Facebook</a> | <a href="https://www.instagram.com" target="_blank">Instagram</a> | <a href="https://github.com" target="_blank">Github</a></p>
+        </div>
+    </footer>
 </body>
 </html>
