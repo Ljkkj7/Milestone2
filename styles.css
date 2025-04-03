@@ -521,7 +521,17 @@ footer {
     transition: 0.6s;
 }
 
+.wordBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0px auto 20px auto;
+}
+
 .wordBoxes .letterBox{
+    display: flex;
     height: 57px;
     width: 56px;
     margin: 4px;
@@ -590,6 +600,10 @@ footer {
         color: #000000;
         transition: 0.6s;
     }
+
+    .gameTitle h1 {
+        font-size: 60px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -636,6 +650,14 @@ footer {
         background-color: #ffffff00;
         color: #000000;
         transition: 0.6s;
+    }
+
+    .gameTitle h1 {
+        font-size: 50px;
+    }
+
+    .gameTitle p {
+        font-size: 25px;
     }
 
     .circlecontainer {
