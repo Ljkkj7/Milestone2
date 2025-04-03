@@ -31,5 +31,6 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
 ### External Code
 
-Background opacity dimming
-- https://stackoverflow.com/questions/2503907/placing-an-background-image-with-padding-in-h2-tag
+[Background opacity dimming](https://stackoverflow.com/questions/2503907/placing-an-background-image-with-padding-in-h2-tag)
+
+[Simon Says CI Project](https://github.com/Code-Institute-Solutions/Jest_Testing_Part2)
