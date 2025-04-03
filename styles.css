@@ -436,10 +436,62 @@ footer {
     transition: 0.6s;
 }
 
+.gameTitle {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
+    border-bottom: 2px solid #000;
+}
+
+.gameContainer h2 {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.details {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.details .attempts {
+    padding-top: 20px;
+}
+
+.details input {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px 5px 5px 5px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
 .gameContent .wordBoxes{
     display: flex;
     flex-wrap: overwrap;
     justify-content: center;
+}
+
+.resetButton {
+    display: flex;
+    background-color: #1bb29486;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px 40px 20px 40px;
+    margin: 0px auto 20px auto;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.resetButton:active {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.6s;
 }
 
 .wordBoxes .letterBox{
