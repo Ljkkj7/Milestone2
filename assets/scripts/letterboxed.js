@@ -15,7 +15,7 @@ async function randomWord() {
     let word = await fetchWord();
     if (!word || word.length === 0) {
         console.log("No word fetched.");
-        return;
+        randomWord(); // Retry fetching a new word if there's an error
     }
     console.log(word[0]);
 
@@ -39,9 +39,9 @@ async function randomWord() {
     }
     console.log(hint[0].meanings[0].definitions[0].definition);
 
-    let html = "<div class='letterBox'>";
+    let html = "<div class='letterBox'></div>";
     for (let i = 0; i < word[0].length; i++) {
-        wordBoxes.innerHTML = html;
+        wordBoxes.appendChild(document.createElement("div")).innerHTML = html;
     }
 }
 randomWord();
