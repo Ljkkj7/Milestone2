@@ -3,6 +3,8 @@ hintTag = document.querySelector(".hint span");
 attempts = document.querySelector(".attempts span");
 wrongLetters = document.querySelector(".wrongLetters span");
 resetBtn = document.querySelector(".resetButton");
+input = document.getElementById("guessInput");
+let storedWord
 
 let wrongLettersList = []; // List to store wrong letters
 let correctLettersList = []; // List to store correct letters
@@ -29,7 +31,8 @@ async function randomWord() {
     const fetchHint = async () => {
         try {
             let response = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word[0]);
-            return await response.json();
+            storedWord = await response.json(); // Store the fetched word for later use
+            return storedWord;
         } catch (err) {
             console.log("Error fetching hint:", err);
             randomWordLocal(); // Retry fetching a new hint locally if there's an error
@@ -68,13 +71,27 @@ function randomWordLocal() {
     for (let i = 0; i < word.length; i++) {
         wordBoxes.appendChild(document.createElement("div")).innerHTML = html;
     }
+    return word; // Return the selected word
+}
+
+function awaitGuess() {
+    let guess = input.value.toLowerCase(); // Get the guessed letter from input
+    input.value = ""; // Clear the input field
+    console.log("Guess:", guess);
+    console.log("Word:", storedWord[0].word);
+
+
 }
 
 function initGame() {
     wordBoxes.innerHTML = ""; // Clear previous word boxes
     randomWord(); // Fetch a new word and hint
     hintTag.innerText = ""; // Clear previous hint
-
+    input.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            awaitGuess(); // Call the awaitGuess function when Enter is pressed
+        }
+    });
 }
 initGame(); // Initialize the game
 

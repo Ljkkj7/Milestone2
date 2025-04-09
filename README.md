@@ -41,3 +41,5 @@ Bug Fix 001 - Used a Z-index of greater than 1 to force NavBar above main conten
 [Simon Says CI Project](https://github.com/Code-Institute-Solutions/Jest_Testing_Part2)
 
 [Async API function](https://stackoverflow.com/questions/74950445/store-fetch-data-in-variable-to-access-it-later)
+
+[API Data Processing](https://stackoverflow.com/questions/74092112/how-to-pass-api-data-into-a-variable-for-later-use-using-javascript)
