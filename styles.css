@@ -550,6 +550,58 @@ footer {
     margin-left: 0px;
 }
 
+.green {
+    display: flex;
+    height: 57px;
+    width: 56px;
+    margin: 4px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #1ba98da4;
+    text-align: center;
+    border-radius: 5px;
+    pointer-events: none;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+}
+
+.yellow {
+    display: flex;
+    height: 57px;
+    width: 56px;
+    margin: 4px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #c9b60ca4;
+    text-align: center;
+    border-radius: 5px;
+    pointer-events: none;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+}
+
+.grey {
+    display: flex;
+    height: 57px;
+    width: 56px;
+    margin: 4px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #eeede6d2;
+    text-align: center;
+    border-radius: 5px;
+    pointer-events: none;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+}
+
+
 @keyframes contact-zoom {
     from { transform: scale(0.9); }
     to { transform: scale(1); }
