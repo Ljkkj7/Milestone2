@@ -84,14 +84,18 @@ function onGuess() {
 
     if (guess === storedWord[0].word) {
         for (let i = 0; i < storedWord[0].word.length; i++) {
+            wordBoxes.children[i].classList.remove("grey"); // Change the box colour from grey
+            wordBoxes.children[i].classList.remove("yellow"); // Change the box colour from yellow
             wordBoxes.children[i].classList.add("green"); // Change the box colour to green
             wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
         }
         alert("Congratulations! You guessed the word!"); // Alert if the guess is correct
         return; // Exit the function if the guess is correct
     }
+
     if (guess.length !== storedWord[0].word.length) {
         alert("Please enter a word with " + storedWord[0].word.length + " letters."); // Alert if the guess length is incorrect
+        return; // Exit the function if the guess length is incorrect
     }
 
     if (attempts.innerText >= 1) {
