@@ -88,7 +88,7 @@ function onGuess() {
     input.value = ""; // Clear the input field
     console.log("Guess:", guess);
     console.log("Word:", storedWord[0].word);
-    
+
     if (guess === storedWord[0].word) {
         for (let i = 0; i < storedWord[0].word.length; i++) {
             wordBoxes.children[i].classList.remove("grey"); // Change the box colour from grey
@@ -139,6 +139,14 @@ function onGuess() {
                         }
                     }
                     if (checkApplyCount(applyList, guess[i]) < checkOccurance(guess[i])) {
+                        if (checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i])) {
+                            if (wordBoxes.children[i].classList.contains("green") || wordBoxes.children[i].classList.contains("yellow")) {
+                                wordBoxes.children[i].classList.remove("green"); // Change the box colour from green
+                                wordBoxes.children[i].classList.remove("yellow"); // Change the box colour from yellow
+                            }
+                            wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
+                            wordBoxes.children[i].innerText = guess[i]; // Display the wrong letter in the corresponding box
+                        }
                         if (wordBoxes.children[i].classList.contains("grey") || wordBoxes.children[i].classList.contains("green")) {
                             wordBoxes.children[i].classList.remove("green"); // Change the box colour from green
                             wordBoxes.children[i].classList.remove("grey"); // Change the box colour from grey
