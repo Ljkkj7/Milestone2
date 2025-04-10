@@ -148,6 +148,8 @@ function initGame() {
     wordBoxes.innerHTML = ""; // Clear previous word boxes
     randomWord(); // Fetch a new word and hint
     hintTag.innerText = ""; // Clear previous hint
+    wrongLettersList = []; // Reset wrong letters list
+    correctLettersList = []; // Reset correct letters list
     input.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
             onGuess(); // Call the awaitGuess function when Enter is pressed
