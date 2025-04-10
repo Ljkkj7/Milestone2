@@ -11,6 +11,12 @@ let correctLettersList = []; // List to store correct letters
 let guesses = 0; // Number of guesses made
 
 async function randomWord() {
+
+    
+    wrongLettersList = []; // Reset wrong letters list
+    wrongLetters.innerText = ""; // Clear previous wrong letters display
+    correctLettersList = []; // Reset correct letters list
+
     const fetchWord = async () => {
         try {
             let response = await fetch("https://random-word-api.herokuapp.com/word?length=5");
@@ -111,15 +117,20 @@ function onGuess() {
                     correctLettersList.push(guess[i]); // Add the correct letter to the list
                 }
             } else if (storedWord[0].word.includes(guess[i])) {
+                wordBoxes.children[i].classList.remove("grey"); // Change the box colour from grey
                 wordBoxes.children[i].classList.add("yellow"); // Change the box colour to yellow
                 wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
             } else {
                 wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
                 wordBoxes.children[i].innerText = guess[i]; // Display the wrong letter in the corresponding box
+                if (wrongLettersList.includes(guess[i])) {
+                    continue; // Skip if the letter is already wrong
+                }
                 wrongLettersList.push(guess[i]); // Add the wrong letter to the list
             }}
         guesses++; // Increment the number of guesses
         attempts.innerText = guesses; // Update the attempts display
+        wrongLetters.innerText = wrongLettersList.join(", "); // Display the wrong letters
     } else if (attempts.innerText == 0) {
         for (let i = 0; i < storedWord[0].word.length; i++) {
             if (guess[i] === storedWord[0].word[i]) {
@@ -148,14 +159,12 @@ function initGame() {
     wordBoxes.innerHTML = ""; // Clear previous word boxes
     randomWord(); // Fetch a new word and hint
     hintTag.innerText = ""; // Clear previous hint
-    wrongLettersList = []; // Reset wrong letters list
-    correctLettersList = []; // Reset correct letters list
-    input.addEventListener("keyup", function (event) {
-        if (event.key === "Enter") {
-            onGuess(); // Call the awaitGuess function when Enter is pressed
-        }
-    });
 }
 initGame(); // Initialize the game
 
 resetBtn.addEventListener("click", initGame); // Reset button to fetch a new word
+input.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        onGuess(); // Call the awaitGuess function when Enter is pressed
+    }
+});
