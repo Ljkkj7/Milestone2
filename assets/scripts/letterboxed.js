@@ -104,23 +104,34 @@ function onGuess() {
         return; // Exit the function if the guess length is incorrect
     }
 
-    if (attempts.innerText >= 1) {
+    if (attempts.innerText >= 1 && attempts.innerText <= 6) {
         for (let i = 0; i < storedWord[0].word.length; i++) {
             if (guess[i] === storedWord[0].word[i]) {
-                if (guess[i].includes(correctLettersList)){
+                if (guess[i].includes(correctLettersList) && wordBoxes.children[i].classList.contains("green")) {
                     continue; // Skip if the letter is already correct
                 } else {
-                    wordBoxes.children[i].classList.remove("grey"); // Change the box colour from grey
-                    wordBoxes.children[i].classList.remove("yellow"); // Change the box colour from yellow
+                    if(wordBoxes.children[i].classList.contains("yellow") || wordBoxes.children[i].classList.contains("grey")) {
+                        wordBoxes.children[i].classList.remove("yellow"); // Change the box colour from yellow
+                        wordBoxes.children[i].classList.remove("grey"); // Change the box colour from grey
+                    }
                     wordBoxes.children[i].classList.add("green"); // Change the box colour to green
                     wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
                     correctLettersList.push(guess[i]); // Add the correct letter to the list
                 }
             } else if (storedWord[0].word.includes(guess[i])) {
-                wordBoxes.children[i].classList.remove("grey"); // Change the box colour from grey
-                wordBoxes.children[i].classList.add("yellow"); // Change the box colour to yellow
-                wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
+                {
+                    if (wordBoxes.children[i].classList.contains("green") || wordBoxes.children[i].classList.contains("grey")) {
+                        wordBoxes.children[i].classList.remove("green"); // Change the box colour from green
+                        wordBoxes.children[i].classList.remove("grey"); // Change the box colour from grey
+                    }
+                    wordBoxes.children[i].classList.add("yellow"); // Change the box colour to yellow
+                    wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
+                }
             } else {
+                if (wordBoxes.children[i].classList.contains("green") || wordBoxes.children[i].classList.contains("yellow")) {
+                    wordBoxes.children[i].classList.remove("green"); // Change the box colour from green
+                    wordBoxes.children[i].classList.remove("yellow"); // Change the box colour from yellow
+                }
                 wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
                 wordBoxes.children[i].innerText = guess[i]; // Display the wrong letter in the corresponding box
                 if (wrongLettersList.includes(guess[i])) {
@@ -152,6 +163,12 @@ function onGuess() {
         guesses++; // Increment the number of guesses
         attempts.innerText = guesses; // Update the attempts display
         wrongLetters.innerText = wrongLettersList.join(", "); // Display the wrong letters
+    } else {
+        alert("Game Over! The word was: " + storedWord[0].word); // Alert if the game is over
+        for (let i = 0; i < storedWord[0].word.length; i++) {
+            wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
+            wordBoxes.children[i].innerText = storedWord[0].word[i]; // Display the correct letter in the corresponding box
+        }
     }
 }
 
