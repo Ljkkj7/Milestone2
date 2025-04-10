@@ -8,6 +8,7 @@ let storedWord
 
 let wrongLettersList = []; // List to store wrong letters
 let correctLettersList = []; // List to store correct letters
+let mediumLettersList = []; // List to store medium letters
 let guesses = 0; // Number of guesses made
 
 async function randomWord() {
@@ -105,7 +106,7 @@ function onGuess() {
         return; // Exit the function if the guess length is incorrect
     }
 
-    if (attempts.innerText >= 1 && attempts.innerText <= 6) {
+    if (attempts.innerText >= 1 && attempts.innerText <= 5) {
         for (let i = 0; i < storedWord[0].word.length; i++) {
             console.log(correctLettersList)
             if (guess[i] === storedWord[0].word[i]) {
@@ -192,13 +193,36 @@ function onGuess() {
         wrongLetters.innerText = wrongLettersList.join(", "); // Display the wrong letters
     } else if (attempts.innerText == 0) {
         for (let i = 0; i < storedWord[0].word.length; i++) {
+            if (applyList[0] === undefined) {
+                applyList[0][0] = guess[i]; // Add the letter to the apply list
+                applyList[0][1] = 0; // Set the count to 0
+            } else {
+                for (let j = 0; j < applyList.length; j++) {
+                    if (applyList[j][0] === guess[i]) {
+                        continue; // Skip if the letter is already in the apply list
+                    } else {
+                        applyList.push([guess[i], 0]); // Add the letter to the apply list with count 0
+                    }
+                }
+            }
             if (guess[i] === storedWord[0].word[i]) {
+                if (guess[i].includes(correctLettersList) && wordBoxes.children[i].classList.contains("green")) {
+                    continue; // Skip if the letter is already correct
+                }
                 wordBoxes.children[i].classList.add("green"); // Change the box colour to green
                 wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
                 correctLettersList.push(guess[i]); // Add the correct letter to the list
-            } else if (storedWord[0].word.includes(guess[i])) {
-                wordBoxes.children[i].classList.add("yellow"); // Change the box colour to yellow
-                wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
+                console.log(correctLettersList);
+            } else if (storedWord[0].word.includes(guess[i]) && !correctLettersList.includes(guess[i])) {
+                if (checkOccuranceList(mediumLettersList, guess[i]) < checkOccurance(guess[i])) {
+                    wordBoxes.children[i].classList.add("yellow"); // Change the box colour to yellow
+                    wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
+                    mediumLettersList.push(guess[i]); // Add the medium letter to the list
+                } else {
+                    wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
+                    wordBoxes.children[i].innerText = guess[i]; // Display the wrong letter in the corresponding box
+                }
+                
             } else {
                 wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
                 wordBoxes.children[i].innerText = guess[i]; // Display the wrong letter in the corresponding box
@@ -251,6 +275,7 @@ function checkApplyCount(list, letter) {
     }
     return 0; // Return 0 if the letter is not found in the apply list
 }
+
 
 function initGame() {
     wordBoxes.innerHTML = ""; // Clear previous word boxes
