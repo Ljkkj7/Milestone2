@@ -4,6 +4,7 @@ attempts = document.querySelector(".attempts span");
 wrongLetters = document.querySelector(".wrongLetters span");
 resetBtn = document.querySelector(".resetButton");
 input = document.getElementById("guessInput");
+submitButton = document.getElementById("submitButton");
 let storedWord
 
 let wrongLettersList = []; // List to store wrong letters
@@ -276,7 +277,6 @@ function checkApplyCount(list, letter) {
     return 0; // Return 0 if the letter is not found in the apply list
 }
 
-
 function initGame() {
     wordBoxes.innerHTML = ""; // Clear previous word boxes
     randomWord(); // Fetch a new word and hint
@@ -285,6 +285,7 @@ function initGame() {
 initGame(); // Initialize the game
 
 resetBtn.addEventListener("click", initGame); // Reset button to fetch a new word
+submitButton.addEventListener("click", onGuess); // Submit button to check the guess
 input.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
         onGuess(); // Call the awaitGuess function when Enter is pressed
