@@ -453,6 +453,31 @@ footer {
     padding-bottom: 20px;
 }
 
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 0px 40px 0px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #000;
+}
+
+.gameDescription {
+    display: none;
+    flex-direction: column;
+    float: right;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    margin: 5px 0px 5px 0px;
+}
+
+.gameDescription p {
+    padding-top: 5px;
+}
+
 .gameContainer h2 {
     font-size: 30px;
     text-align: center;
@@ -504,7 +529,8 @@ footer {
 }
 
 .resetButton {
-    display: flex;
+    display: none;
+    flex-direction: row;
     background-color: #1bb29486;
     border: 2px solid #000;
     border-radius: 10px;
@@ -515,7 +541,20 @@ footer {
     text-decoration: none;
 }
 
-.resetButton:active, .resetButton:hover, .guessButton:hover, .guessButton:active {
+.helpButton {
+    display: flex;
+    flex-direction: row;
+    background-color: #1bb29486;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px 40px 20px 40px;
+    margin: 0px auto 20px auto;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.resetButton:active, .resetButton:hover, .guessButton:hover, .guessButton:active, .helpButton:hover, .helpButton:active {
     background-color: #000000;
     color: #ffffff;
     transition: 0.6s;
