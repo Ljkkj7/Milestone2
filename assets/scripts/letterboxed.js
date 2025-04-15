@@ -6,7 +6,7 @@ resetBtn = document.querySelector(".resetButton");
 input = document.getElementById("guessInput");
 submitButton = document.getElementById("submitButton");
 resetBtn = document.querySelector(".resetButton");
-helpInfo = document.querySelector(".gameDescription");
+helpInfo = document.getElementById(".helpPopup");
 helpButton = document.querySelector(".helpButton");
 let storedWord
 
@@ -282,13 +282,14 @@ function checkApplyCount(list, letter) {
 }
 
 function showHelp() {
-    helpInfo.style.display = "flex"; // Show the help information
+    helpPopup.classList.toggle("show"); // Toggle the visibility of the help information
 }
 
 function initGame() {
     wordBoxes.innerHTML = ""; // Clear previous word boxes
     randomWord(); // Fetch a new word and hint
     hintTag.innerText = ""; // Clear previous hint
+    resetBtn.style.display = "none"; // Hide the reset button
 }
 initGame(); // Initialize the game
 

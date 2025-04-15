@@ -464,20 +464,6 @@ footer {
     border-bottom: 2px solid #000;
 }
 
-.gameDescription {
-    display: none;
-    flex-direction: column;
-    float: right;
-    font-size: 20px;
-    text-align: center;
-    padding: 5px 0px 5px 0px;
-    margin: 5px 0px 5px 0px;
-}
-
-.gameDescription p {
-    padding-top: 5px;
-}
-
 .gameContainer h2 {
     font-size: 30px;
     text-align: center;
@@ -547,12 +533,56 @@ footer {
     background-color: #1bb29486;
     border: 2px solid #000;
     border-radius: 10px;
-    padding: 20px 40px 20px 40px;
+    padding: 20px 0px 20px 0px;
     margin: 0px auto 20px auto;
     font-size: 30px;
     color: #000000;
     text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+    cursor: pointer;
 }
+
+.helpButton .helpText {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+}
+
+.helpButton .helpText p {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px 10px 20px;
+    margin: 0px auto 10px auto;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    width: fit-content;
+}
+
+.helpButton .show {
+    visibility: visible;
+    animation: fadeIn 1s;
+}
+
+.helpButton .helpText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border: #000000 solid 1px;
+    border-color: #afafaff5 transparent transparent transparent;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
 
 .resetButton:active, .resetButton:hover, .guessButton:hover, .guessButton:active, .helpButton:hover, .helpButton:active {
     background-color: #000000;
