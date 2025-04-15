@@ -576,7 +576,7 @@ footer {
     visibility: hidden;
     position: absolute;
     z-index: 1;
-    bottom: 0%;
+    bottom: 10%;
 }
 
 .helpButton .helpText p {
@@ -734,6 +734,7 @@ footer {
         width: 50%;
         left: 25%;
         z-index: 2;
+        animation: fadeIn 0.5s;
     }
 
     .menulist li {
@@ -785,6 +786,7 @@ footer {
         width: 75%;
         left: 12.5%;
         z-index: 2;
+        animation: fadeIn 0.5s;
     }
 
     .menulist li {

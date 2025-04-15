@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Close the menu if clicking outside of the navbar
     document.addEventListener("click", function (event) {
         if (!navbar.contains(event.target)) {
-            menu.classList.remove("show");
+            menu.classList.remove("show");  
         }
     });
 
