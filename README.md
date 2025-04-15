@@ -45,3 +45,6 @@ Bug Fix 001 - Used a Z-index of greater than 1 to force NavBar above main conten
 [API Data Processing](https://stackoverflow.com/questions/74092112/how-to-pass-api-data-into-a-variable-for-later-use-using-javascript)
 
 [JS 2D Array](https://www.freecodecamp.org/news/javascript-2d-arrays/)
+
+[Regex expression check](https://www.w3resource.com/javascript/form/all-letters-field.php#:~:text=You%20can%20write%20a%20JavaScript,HTML%20form%20contains%20only%20letters.&text=To%20get%20a%20string%20contains,%2F%20which%20allows%20only%20letters.)
+

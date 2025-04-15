@@ -471,6 +471,34 @@ footer {
     margin: 20px 0px 20px 0px;
 }
 
+.gameOverMessage {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    bottom: 65%;
+    transform: translate(-50%, 50%);
+}
+
+.gameOverMessage p {
+    font-size: 60px;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    margin: 10px auto 0px auto;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.gameOverMessage .gOTop {
+    font-size: 80px;
+}
+
+.gameOverMessage.show {
+    visibility: visible;
+    animation: fadeIn 0.5s;
+}
+
 .errorMessage {
     visibility: hidden;
     position: absolute;
@@ -861,7 +889,26 @@ footer {
         margin: 5% auto;
     }
 
+    .helpButton .helpText {
+        bottom: -5%;
+    }
+
     .errorMessage {
         left: 0%;
+    }
+
+    .gameOverMessage {
+        left: 50%;
+        bottom: 60%;
+        transform: translate(-50%, 50%);
+        width: 100%;
+    }
+
+    .gameOverMessage p {
+        font-size: 55px;
+    }
+
+    .gameOverMessage .gOTop {
+        font-size: 60px;
     }
 }

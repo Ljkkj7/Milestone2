@@ -9,6 +9,7 @@ resetBtn = document.querySelector(".resetButton");
 helpInfo = document.getElementById(".helpPopup");
 helpButton = document.querySelector(".helpButton");
 errorInfo = document.getElementById("errorMessage");
+gameOverInfo = document.getElementById("gameOverMessage");
 let storedWord
 
 let wrongLettersList = []; // List to store wrong letters
@@ -246,7 +247,7 @@ function onGuess() {
         attempts.innerText = guesses; // Update the attempts display
         wrongLetters.innerText = wrongLettersList.join(", "); // Display the wrong letters
     } else {
-        alert("Game Over! The word was: " + storedWord[0].word); // Alert if the game is over
+        gameOverInfo.classList.toggle("show"); // Alert if the game is over
         for (let i = 0; i < storedWord[0].word.length; i++) {
             wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
             wordBoxes.children[i].innerText = storedWord[0].word[i]; // Display the correct letter in the corresponding box
@@ -295,6 +296,7 @@ function initGame() {
     randomWord(); // Fetch a new word and hint
     hintTag.innerText = ""; // Clear previous hint
     resetBtn.style.display = "none"; // Hide the reset button
+    gameOverInfo.classList.remove("show"); // Hide the game over message
 }
 initGame(); // Initialize the game
 
