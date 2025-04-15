@@ -484,10 +484,12 @@ footer {
     text-align: center;
     padding: 20px 10px 20px 10px;
     margin: 10px auto 0px auto;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #1ba98c;
+    color: #000000;
     border-radius: 10px;
     width: fit-content;
+    font-weight: 600;
+    border: 2px solid #000000;
 }
 
 .gameOverMessage .gOTop {
@@ -782,6 +784,21 @@ footer {
     .gameTitle h1 {
         font-size: 60px;
     }
+
+    .gameOverMessage {
+        left: 50%;
+        bottom: 55%;
+        transform: translate(-50%, 50%);
+        width: 100%;
+    }
+
+    .gameOverMessage p {
+        font-size: 55px;
+    }
+
+    .gameOverMessage .gOTop {
+        font-size: 60px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -899,7 +916,7 @@ footer {
 
     .gameOverMessage {
         left: 50%;
-        bottom: 60%;
+        bottom: 65%;
         transform: translate(-50%, 50%);
         width: 100%;
     }

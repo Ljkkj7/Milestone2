@@ -10,6 +10,7 @@ helpInfo = document.getElementById(".helpPopup");
 helpButton = document.querySelector(".helpButton");
 errorInfo = document.getElementById("errorMessage");
 gameOverInfo = document.getElementById("gameOverMessage");
+gameWinInfo = document.getElementById("gameWinMessage");
 let storedWord
 
 let wrongLettersList = []; // List to store wrong letters
@@ -103,7 +104,8 @@ function onGuess() {
             wordBoxes.children[i].classList.add("green"); // Change the box colour to green
             wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
         }
-        alert("Congratulations! You guessed the word!"); // Alert if the guess is correct
+        gameWinInfo.classList.toggle("show") // Alert if the guess is correct
+        resetBtn.style.display = "flex"; // Show the reset button
         return; // Exit the function if the guess is correct
     }
 
@@ -297,6 +299,7 @@ function initGame() {
     hintTag.innerText = ""; // Clear previous hint
     resetBtn.style.display = "none"; // Hide the reset button
     gameOverInfo.classList.remove("show"); // Hide the game over message
+    gameWinInfo.classList.remove("show"); // Hide the game win message
 }
 initGame(); // Initialize the game
 
