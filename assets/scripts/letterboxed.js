@@ -8,6 +8,7 @@ submitButton = document.getElementById("submitButton");
 resetBtn = document.querySelector(".resetButton");
 helpInfo = document.getElementById(".helpPopup");
 helpButton = document.querySelector(".helpButton");
+errorInfo = document.getElementById("errorMessage");
 let storedWord
 
 let wrongLettersList = []; // List to store wrong letters
@@ -105,8 +106,12 @@ function onGuess() {
         return; // Exit the function if the guess is correct
     }
 
-    if (guess.length !== storedWord[0].word.length) {
-        alert("Please enter a word with " + storedWord[0].word.length + " letters."); // Alert if the guess length is incorrect
+    let letters = /^[a-zA-Z]+$/; // Regular expression to check if the input contains only letters
+    if (guess.length !== storedWord[0].word.length || !guess.match(letters)) {
+        errorInfo.classList.toggle("show") // Alert if the guess length is incorrect
+        setTimeout(() => {
+            errorInfo.classList.toggle("show") // Hide the alert after a delay
+        }, 3000);
         return; // Exit the function if the guess length is incorrect
     }
 
