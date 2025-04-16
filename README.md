@@ -34,6 +34,11 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 Bug 001 - NavBar Hamburger was overlaying onto main content 
 Bug Fix 001 - Used a Z-index of greater than 1 to force NavBar above main content
 
+## Known Bugs
+
+Bug 001 - Yellow style applying to letter before a doubly correct letter - eg doodle would display an input of ooooo as [grey][yellow][green][green][grey]
+Bug fix - rework the if statement logic around class checking - currently checks if a class is applied which is causing skips in checks for already applied classes along with global variable assigning correct letters permanently rather than per guess, also causing skips - fix is out of scope due to time constraints of project
+
 ### External Code
 
 [Background opacity dimming](https://stackoverflow.com/questions/2503907/placing-an-background-image-with-padding-in-h2-tag)
