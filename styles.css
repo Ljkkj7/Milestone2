@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 200px;
+    height: 250px;
     width: 600px;
     margin: 10% auto;
     background-color: #ffffff;
@@ -29,6 +29,22 @@ body {
 
 .fofContainer h2 {
     padding: 0px 0px 20px 0px;
+}
+
+.fofContainer a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: #1bb29486;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+.fofContainer a:hover, .fofContainer a:active {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.6s;
 }
 
 .navbar {
