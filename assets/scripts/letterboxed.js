@@ -123,23 +123,6 @@ function onGuess() {
             console.log(correctLettersList)
             if (guess[i] === storedWord[0].word[i]) {
                 if (guess[i].includes(correctLettersList) && wordBoxes.children[i].classList.contains("green")) {
-                    for (let j = 0; j < applyList.length; j++) {
-                        if (applyList[j][0] === guess[i]) {
-                            applyList[j][1]++; // Increment the count for the letter in the apply list
-                            console.log(applyList[j][1]); // Log the count for the letter in the apply list
-                        }
-                    }
-                    if(checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i]) || checkApplyCount(applyList, guess[i]) >= checkOccurance(guess[i])) {
-                        index = checkIndex("yellow"); // Get the index of the letter with yellow colour
-                        wordBoxes.children[index].classList.remove("yellow"); // Change the box colour from yellow
-                        wordBoxes.children[index].classList.add("grey"); // Change the box colour to grey
-                        wordBoxes.children[index].innerText = guess[i]; // Display the wrong letter in the corresponding box
-                        for (let j = 0; j < applyList.length; j++) {
-                            if (applyList[j][0] === guess[i]) {
-                                applyList[j][1]--; // Increment the count for the letter in the apply list
-                            }
-                        }
-                    }
                     continue; // Skip if the letter is already correct
                 } else {
                     if (applyList[0] === undefined) {
@@ -170,17 +153,6 @@ function onGuess() {
                         continue; // Skip if the letter is already correct
                     } else {
                         correctLettersList.push(guess[i]); // Add the correct letter to the list
-                    }
-                    if(checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i]) && checkApplyCount(applyList, guess[i]) >> checkOccurance(guess[i])) {
-                        index = checkIndex("yellow"); // Get the index of the letter with yellow colour
-                        wordBoxes.children[index].classList.remove("yellow"); // Change the box colour from yellow
-                        wordBoxes.children[index].classList.add("grey"); // Change the box colour to grey
-                        wordBoxes.children[index].innerText = guess[i]; // Display the wrong letter in the corresponding box
-                        for (let j = 0; j < applyList.length; j++) {
-                            if (applyList[j][0] === guess[i]) {
-                                applyList[j][1]--; // Increment the count for the letter in the apply list
-                            }
-                        }
                     }
                 }
             } else if (storedWord[0].word.includes(guess[i])) {
@@ -249,17 +221,6 @@ function onGuess() {
             }
             if (guess[i] === storedWord[0].word[i]) {
                 if (guess[i].includes(correctLettersList) && wordBoxes.children[i].classList.contains("green")) {
-                    continue; // Skip if the letter is already correct
-                } else {
-                    wordBoxes.children[i].classList.add("green"); // Change the box colour to green
-                    wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
-                    correctLettersList.push(guess[i]); // Add the correct letter to the list
-                    for (let j = 0; j < applyList.length; j++) {
-                        if (applyList[j][0] === guess[i]) {
-                            applyList[j][1]++; // Increment the count for the letter in the apply list
-                        }
-                    }
-                    console.log(correctLettersList);
                     if(checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i]) && checkApplyCount(applyList, guess[i]) >> checkOccurance(guess[i])) {
                         index = checkIndex("yellow"); // Get the index of the letter with yellow colour
                         wordBoxes.children[index].classList.remove("yellow"); // Change the box colour from yellow
@@ -271,6 +232,28 @@ function onGuess() {
                             }
                         }
                     }
+                    continue; // Skip if the letter is already correct
+                } else {
+                    wordBoxes.children[i].classList.add("green"); // Change the box colour to green
+                    wordBoxes.children[i].innerText = guess[i]; // Display the correct letter in the corresponding box
+                    correctLettersList.push(guess[i]); // Add the correct letter to the list
+                    for (let j = 0; j < applyList.length; j++) {
+                        if (applyList[j][0] === guess[i]) {
+                            applyList[j][1]++; // Increment the count for the letter in the apply list
+                        }
+                    }
+                    if(checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i]) && checkApplyCount(applyList, guess[i]) >> checkOccurance(guess[i])) {
+                        index = checkIndex("yellow"); // Get the index of the letter with yellow colour
+                        wordBoxes.children[index].classList.remove("yellow"); // Change the box colour from yellow
+                        wordBoxes.children[index].classList.add("grey"); // Change the box colour to grey
+                        wordBoxes.children[index].innerText = guess[i]; // Display the wrong letter in the corresponding box
+                        for (let j = 0; j < applyList.length; j++) {
+                            if (applyList[j][0] === guess[i]) {
+                                applyList[j][1]--; // Increment the count for the letter in the apply list
+                            }
+                        }
+                    }
+                    console.log(correctLettersList);
                 }
             } else if (storedWord[0].word.includes(guess[i]) && !correctLettersList.includes(guess[i])) {
                 if (checkOccuranceList(mediumLettersList, guess[i]) < checkOccurance(guess[i])) {
@@ -286,21 +269,9 @@ function onGuess() {
                     wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
                     wordBoxes.children[i].innerText = guess[i]; // Display the wrong letter in the corresponding box
                 }
-                
             } else {
                 wordBoxes.children[i].classList.add("grey"); // Change the box colour to grey
                 wordBoxes.children[i].innerText = guess[i]; // Display the wrong letter in the corresponding box
-                if(checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i]) && checkApplyCount(applyList, guess[i]) >> checkOccurance(guess[i])) {
-                    index = checkIndex("yellow"); // Get the index of the letter with yellow colour
-                    wordBoxes.children[index].classList.remove("yellow"); // Change the box colour from yellow
-                    wordBoxes.children[index].classList.add("grey"); // Change the box colour to grey
-                    wordBoxes.children[index].innerText = guess[i]; // Display the wrong letter in the corresponding box
-                    for (let j = 0; j < applyList.length; j++) {
-                        if (applyList[j][0] === guess[i]) {
-                            applyList[j][1]--; // Increment the count for the letter in the apply list
-                        }
-                    }
-                }
                 if (wrongLettersList.includes(guess[i])) {
                     continue; // Skip if the letter is already wrong
                 }
