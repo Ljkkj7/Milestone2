@@ -129,7 +129,7 @@ function onGuess() {
                             console.log(applyList[j][1]); // Log the count for the letter in the apply list
                         }
                     }
-                    if(checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i]) && checkApplyCount(applyList, guess[i]) >> checkOccurance(guess[i])) {
+                    if(checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i]) || checkApplyCount(applyList, guess[i]) >= checkOccurance(guess[i])) {
                         index = checkIndex("yellow"); // Get the index of the letter with yellow colour
                         wordBoxes.children[index].classList.remove("yellow"); // Change the box colour from yellow
                         wordBoxes.children[index].classList.add("grey"); // Change the box colour to grey
