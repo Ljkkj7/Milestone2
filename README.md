@@ -198,6 +198,48 @@ Desktop and laptop screens are displayed identically without adjustments to the 
 
 ## Future Developments
  
+ In the future continued development of this website - here are a few things I would change
+
+ - Reduce the length of the main onGuess function in letterBoxed to better utilise functions for conditional checks rather than having it all processed in one function
+ - Implement automated testing to further solidify the flexibility of the letterBoxed function to better handle edge cases
+ - Create back end functionality to process user suggestions
+
+ ## Deployment
+
+ - The project was deployed to Github Pages using the following steps:
+
+1. Create and/or Log in to GitHub
+2. Locate the repository within GitHub
+3. Within the repository, click on Settings
+4. Within the settings page locate the sub-menu on the left hand side and click on Pages
+5. Under "Source" select "Branch:main" then /root
+6. Click Save
+7. Wait a few moments for the repository to deploy
+8. At this point the repository will be deployed and ready to view
+
+## Cloning the Repository
+
+- Follow the steps below to clone the repository:
+
+1. Locate the repository
+2. Click the button labelled "Code" to the top right of the screen
+3. Click HTTPS and copy the link provided
+4. In your local environment navigate to the desired directory
+5. Open a terminal and type "git clone `repository-url`"
+6. Press enter to begin the cloning process
+
+## Forking the Repository
+
+- Follow these steps to fork the repository
+
+1. Locate the repository on GitHub
+2. Click `Fork` in the top right corner
+3. If necassary, select the owner for the forked code under the `Owner` dropdown menu.
+4. Optionally, edit the `Repository Name` field to rename your forked repository
+5. Optionally, use the `Description` field to input a description of your fork
+6. Select "Copy the DEFAULT branch only"
+  - This is another optional step, many scenarios only require a fork of the default branch. If you do not select this you will copy all branches into your fork
+7. Click `Create Fork`
 
 ## External Code
 
