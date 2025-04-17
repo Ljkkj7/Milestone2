@@ -64,6 +64,22 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 - **Chrome DevTools** for responsiveness & lighthouse testing.
 - **Google Fonts** Used for typography across the site.
 
+## Wireframes
+
+### Desktop
+
+- [Homepage](assets/images/homeDesktopWireframe.png)
+- [Simon Says](assets/images/simonDesktopWireframe.png)
+- [LetterBoxed](assets/images/letterboxedDesktopWireframe.png)
+- [Contact](assets/images/contactDesktopWireframe.png)
+
+### Mobile
+
+- [Homepage](assets/images/homeMobileWireframe.png)
+- [Simon Says](assets/images/simonMobileWireframe.png)
+- [LetterBoxed](assets/images/letterboxedMobileWireframe.png)
+- [Contact](assets/images/contactMobileWireframe.png)
+
 ## Bug Fixes
 
 ### Bug 001 - NavBar Hamburger was overlaying onto main content 
