@@ -87,7 +87,7 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
 ### W3C HTML Checks
 
-- [Homepage]()
+- [Homepage](assets/images/indexHTMLCheck.jpg)
 - [Simon Says]()
 - [LetterBoxed]()
 - [Contact]()
