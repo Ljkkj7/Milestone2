@@ -123,6 +123,22 @@ function onGuess() {
             console.log(correctLettersList)
             if (guess[i] === storedWord[0].word[i]) {
                 if (guess[i].includes(correctLettersList) && wordBoxes.children[i].classList.contains("green")) {
+                    for (let j = 0; j < applyList.length; j++) {
+                        if (applyList[j][0] === guess[i]) {
+                            applyList[j][1]++; // Increment the count for the letter in the apply list
+                        }
+                    }
+                    if(checkApplyCount(applyList, guess[i]) >> checkOccurance(guess[i])) {
+                        index = checkIndex("yellow"); // Get the index of the letter with yellow colour
+                        wordBoxes.children[index].classList.remove("yellow"); // Change the box colour from yellow
+                        wordBoxes.children[index].classList.add("grey"); // Change the box colour to grey
+                        wordBoxes.children[index].innerText = guess[i]; // Display the wrong letter in the corresponding box
+                        for (let j = 0; j < applyList.length; j++) {
+                            if (applyList[j][0] === guess[i]) {
+                                applyList[j][1]--; // Increment the count for the letter in the apply list
+                            }
+                        }
+                    }
                     continue; // Skip if the letter is already correct
                 } else {
                     if (applyList[0] === undefined) {
@@ -221,7 +237,7 @@ function onGuess() {
             }
             if (guess[i] === storedWord[0].word[i]) {
                 if (guess[i].includes(correctLettersList) && wordBoxes.children[i].classList.contains("green")) {
-                    if(checkOccuranceList(correctLettersList, guess[i]) === checkOccurance(guess[i]) && checkApplyCount(applyList, guess[i]) >> checkOccurance(guess[i])) {
+                    if(checkApplyCount(applyList, guess[i]) >> checkOccurance(guess[i])) {
                         index = checkIndex("yellow"); // Get the index of the letter with yellow colour
                         wordBoxes.children[index].classList.remove("yellow"); // Change the box colour from yellow
                         wordBoxes.children[index].classList.add("grey"); // Change the box colour to grey
