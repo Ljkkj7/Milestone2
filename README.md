@@ -7,6 +7,8 @@ Target Audience:
 - Children with limited access to the internet being allowed to play simple games
 - People bored at work / school looking for something to do
 
+![Website Mockup](assets/images/websiteMockup.jpg)
+
 # User Experience [UX]
 
 ### Design
@@ -126,12 +128,12 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
 #### As a first time visitor I want to be able to easily understand the functionality of the website
 - I believe this is achieved through the use of sections on the index/home page to display the current games available on the website, with background images giving a brief insight into what the user can expect upon clicking. 
-- **[Reference Image - Homepage Sections]()**
+- **[Reference Image - Homepage Sections](assets/images/home.jpg)**
 
 #### As a first time visitor I want to be able to immediately understand how to navigate and use the features of the website.
 - When the user lands on the homepage of the website, they will be presented with a navigation bar that consists of the primary pages on the site. These are available in accessible, easy to read colours and function as one would assume. Alongside the CTA buttons within the sections of the homepage which give descriptions on what the games are and the button to access them, being through the navbar or the sections on the homepage. 
-- **[Reference Image - Navbar]()**
-- **[Reference Image - Homepage]()**
+- **[Reference Image - Navbar](assets/images/navbar.jpg)**
+- **[Reference Image - Homepage](assets/images/home.jpg)**
 
 #### As a first time visitor I expect the website to display appropriately on all the types of screen I view it on
 
@@ -165,13 +167,18 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 - [Contact](assets/images/contactTablet.jpg)
 - [404](assets/images/404HTMLCheck.jpg)
 
-#### As a first time visitor I want to easily be able understand how to use the main features of the website
+Desktop and laptop screens are displayed identically without adjustments to the navbar through JS manipulation of the DOM to display hamburger menus.
 
 ### Returning Visitor
 
 #### As a returning visitor, I want to be able to play the same games again consistently without any bugs
 
+- As shown in the JSHint validtion - the function used throws no critical errors and only browser compatibility issues, meaning the scripts ran will be reproducable upon every instance of the games played
+
 #### As a returning visitor, I want to be able to suggest new ideas for games to be implemented.
+
+- Through the implementation of a contact page, users are able to submit their ideas to the website creators through a simple form.
+- **[Reference Image - Contact](assets/images/contact.jpg)**
 
 ## Future Developments
  
