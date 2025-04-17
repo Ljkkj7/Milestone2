@@ -46,9 +46,11 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
    Used developer tools and console testing to develop a wordle clone
 
 ## Technologies Used
+
+### Languages, API's & Source Control
 - **HTML5, CSS3, and JavaScript** for the client-side interface.
-- **Word generator API** to fetch words.
-- **Dictionary API** to provide hints for words.
+- **Word generator API** to fetch words. [API Link](https://random-word-api.herokuapp.com/home)
+- **Dictionary API** to provide hints for words. [API Link](https://dictionaryapi.dev)
 - **CSS Grid & Flexbox** for responsive layout.
 - **Git & GitHub** for version control and repository hosting.
 
@@ -56,30 +58,40 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 - **Git & GitHub** for version control.    
 - **Visual Studio Code** as the development environment.  
 - **Live Server Extension** for live preview.  
-- **W3C Validators** for HTML/CSS validation.  
+- **W3C Validators** for HTML/CSS validation.
+- **JSHint** for JS validation.  
 - **Chrome DevTools** for responsiveness testing.
+- **Google Fonts** Used for typography across the site.
 
 ## Bug Fixes
 
 ### Bug 001 - NavBar Hamburger was overlaying onto main content 
-- Bug fix - Used a Z-index of greater than 1 to force NavBar above main content
+- Bug fix - Used a Z-index of greater than 1 to force NavBar above main content 
 
-### Bug 002 - Styles not updating in init game function in line with guesses
-- Bug fix - Added conditional checks for classes applied during the onGuess() function
+### Bug 002 - Styles not updating in init game function in line with guesses 
+- Bug fix - Added conditional checks for classes applied during the onGuess() function - **[Github Commit Link for Code Changes](https://github.com/Ljkkj7/Milestone2/commit/6aa3b99b220a09d0915aaa29d733f001fc2daccc)**
 
 ### Bug 003 - Applied style not updating correctly in line with letters
-- Bug fix - Addition of an apply list array to check amount of times the style was applied during a guess and introducing conditional checks with this function
+- Bug fix - Addition of an apply list array to check amount of times the style was applied during a guess and introducing conditional checks with this function - **[Github Commit Link for Code Changes](https://github.com/Ljkkj7/Milestone2/commit/a9ecf94dd60a493503ba9eaaccdd2390d97e95a1)**
 
 ### Bug 004 - Grey style not applying to already correct letters - classes staying yellow
-- Bug fix - Added conditional checks in each application of style to add or remove redundant classes
+- Bug fix - Added conditional checks in each application of style to add or remove redundant classes - **[Github Commit Link for Code Changes](https://github.com/Ljkkj7/Milestone2/commit/6687400bc331242f0cedc8b3c7511421df599e9d)**
 
 ### Bug 005 - Recursive inputs happening upon page refresh
-- Bug fix - Removed event listener from init game function to outside of the function - so it only runs once per game/guess
+- Bug fix - Removed event listener from init game function to outside of the function - so it only runs once per game/guess - **[Github Commit Link for Code Changes](https://github.com/Ljkkj7/Milestone2/commit/ebf052e7f20019762a48282b028e918f3332c883)**
 
-## Known Bugs
+### Bug 006 - Preceeding letter not changing class from yellow if all letters are already correct
+- Bug fix - Added conditional check with an apply list array to check the index of letters that have been over applied and removed the corresponding class - **[Github Commit Link for Code Changes](https://github.com/Ljkkj7/Milestone2/commit/78343eea5e3a2c6fa035423730f62d60bac3f771)**
 
-### Bug 001 - Yellow style applying to letter before a doubly correct letter - eg doodle would display an input of ooooo as [grey][yellow][green][green][grey]
-- Bug fix - rework the if statement logic around class checking - currently checks if a class is applied which is causing skips in checks for already applied classes along with global variable assigning correct letters permanently rather than per guess, also causing skips - fix is out of scope due to time constraints of project
+## Validation Results
+
+### W3C HTML Checks
+
+- [Homepage]()
+- [Simon Says]()
+- [LetterBoxed]()
+- [Contact]()
+- [404]()
 
 ## External Code
 
