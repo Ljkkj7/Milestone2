@@ -93,6 +93,35 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 - [Contact](assets/images/contactHTMLCheck.jpg)
 - [404](assets/images/404HTMLCheck.jpg)
 
+### W3C CSS Checks
+
+- [CSS Check](assets/images/CSSValidation.jpg)
+
+### JSHint Checks
+
+#### ![JSHint picture 1](assets/images/JSHint1.jpg)
+#### ![JSHint picture 2](assets/images/JSHint2.jpg)
+#### ![JSHint picture 3](assets/images/JSHint3.jpg)
+
+### Lighthouse Reports
+
+#### Desktop
+
+- [Homepage Desktop](assets/images/indexLighthouseReport.jpg)
+- [Simon Says Desktop](assets/images/simonLighthouseReport.jpg)
+- [LetterBoxed Desktop](assets/images/letterBoxLighthouseReport.jpg)
+- [Contact Desktop](assets/images/contactLighthouseReport.jpg)
+- [404 Desktop](assets/images/404LighthouseReport.jpg)
+ 
+#### Mobile
+
+- [Homepage Mobile](assets/images/indexLighthouseReportMobile.jpg)
+- [Simon Says Mobile](assets/images/simonLighthouseReportMobile.jpg)
+- [LetterBoxed Mobile](assets/images/letterBoxLighthouseReportMobile.jpg)
+- [Contact Mobile](assets/images/contactLighthouseReportMobile.jpg)
+- [404 Mobile](assets/images/404LighthouseReportMobile.jpg)
+ 
+
 ## External Code
 
 [Background opacity dimming](https://stackoverflow.com/questions/2503907/placing-an-background-image-with-padding-in-h2-tag)
