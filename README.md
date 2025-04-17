@@ -88,10 +88,10 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 ### W3C HTML Checks
 
 - [Homepage](assets/images/indexHTMLCheck.jpg)
-- [Simon Says]()
-- [LetterBoxed]()
-- [Contact]()
-- [404]()
+- [Simon Says](assets/images/simonSaysHTMLCheck.jpg)
+- [LetterBoxed](assets/images/letterBoxHTMLCheck.jpg)
+- [Contact](assets/images/contactHTMLCheck.jpg)
+- [404](assets/images/404HTMLCheck.jpg)
 
 ## External Code
 
