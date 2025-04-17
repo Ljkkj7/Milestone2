@@ -54,13 +54,12 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 - **CSS Grid & Flexbox** for responsive layout.
 - **Git & GitHub** for version control and repository hosting.
 
-### Tools
-- **Git & GitHub** for version control.    
+### Tools   
 - **Visual Studio Code** as the development environment.  
 - **Live Server Extension** for live preview.  
 - **W3C Validators** for HTML/CSS validation.
 - **JSHint** for JS validation.  
-- **Chrome DevTools** for responsiveness testing.
+- **Chrome DevTools** for responsiveness & lighthouse testing.
 - **Google Fonts** Used for typography across the site.
 
 ## Bug Fixes
@@ -120,6 +119,61 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 - [LetterBoxed Mobile](assets/images/letterBoxLighthouseReportMobile.jpg)
 - [Contact Mobile](assets/images/contactLighthouseReportMobile.jpg)
 - [404 Mobile](assets/images/404LighthouseReportMobile.jpg)
+
+## Testing User Stories
+
+### First Time Visitor
+
+#### As a first time visitor I want to be able to easily understand the functionality of the website
+- I believe this is achieved through the use of sections on the index/home page to display the current games available on the website, with background images giving a brief insight into what the user can expect upon clicking. 
+- **[Reference Image - Homepage Sections]()**
+
+#### As a first time visitor I want to be able to immediately understand how to navigate and use the features of the website.
+- When the user lands on the homepage of the website, they will be presented with a navigation bar that consists of the primary pages on the site. These are available in accessible, easy to read colours and function as one would assume. Alongside the CTA buttons within the sections of the homepage which give descriptions on what the games are and the button to access them, being through the navbar or the sections on the homepage. 
+- **[Reference Image - Navbar]()**
+- **[Reference Image - Homepage]()**
+
+#### As a first time visitor I expect the website to display appropriately on all the types of screen I view it on
+
+##### Small Mobile Screens
+- [Homepage](assets/images/homeMobile.jpg)
+- [Homepage Game Section](assets/images/homeMobileSection.jpg)
+- [Navbar](assets/images/homeMobileNavbar.jpg)
+- [Simon Says](assets/images/simonMobile.jpg)
+- [LetterBoxed](assets/images/letterBoxMobile.jpg)
+- [LetterBoxed Help Pop-up](assets/images/letterBoxMobileHelp.jpg)
+- [Contact](assets/images/contactMobile.jpg)
+- [404](assets/images/404HTMLCheck.jpg)
+
+##### Large Mobile Screens
+- [Homepage](assets/images/homeMobileL.jpg)
+- [Homepage Game Section](assets/images/homeMobileSectionL.jpg)
+- [Navbar](assets/images/homeMobileNavbarL.jpg)
+- [Simon Says](assets/images/simonMobileL.jpg)
+- [LetterBoxed](assets/images/letterBoxMobileL.jpg)
+- [LetterBoxed Help Pop-up](assets/images/letterBoxMobileHelpL.jpg)
+- [Contact](assets/images/contactMobileL.jpg)
+- [404](assets/images/404HTMLCheck.jpg)
+
+##### Tablet Screens
+- [Homepage](assets/images/homeTablet.jpg)
+- [Homepage Game Section](assets/images/homeTabletSection.jpg)
+- [Navbar](assets/images/homeTabletNavbar.jpg)
+- [Simon Says](assets/images/simonTablet.jpg)
+- [LetterBoxed](assets/images/letterBoxTablet.jpg)
+- [LetterBoxed Help Pop-up](assets/images/letterBoxTabletHelp.jpg)
+- [Contact](assets/images/contactTablet.jpg)
+- [404](assets/images/404HTMLCheck.jpg)
+
+#### As a first time visitor I want to easily be able understand how to use the main features of the website
+
+### Returning Visitor
+
+#### As a returning visitor, I want to be able to play the same games again consistently without any bugs
+
+#### As a returning visitor, I want to be able to suggest new ideas for games to be implemented.
+
+## Future Developments
  
 
 ## External Code
