@@ -108,6 +108,29 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 ### Uppercase Image files
 - Some image files imported in the incorrect case format. Upon attempting to refactor the image file names I was thrown an error in VSCode that would'nt allow me to rewrite the file names.
 
+## Manual/Automated Testing
+
+### Manual vs Automated testing
+
+#### Manual testing
+
+#### Automated testing
+
+### Tests
+
+| Test | Expected Result | Achieved |
+| :------ | :------: | :------ |
+| That | This | [] |
+| That | This | [] |
+| That | This | [] |
+| That | This | [] |
+| That | This | [] |
+| That | This | [] |
+| That | This | [] |
+| That | This | [] |
+| That | This | [] |
+| That | This | [] |
+
 ## Validation Results
 
 ### W3C HTML Checks
