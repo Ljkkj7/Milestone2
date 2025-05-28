@@ -147,16 +147,18 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
 | Test | Expected Result | Achieved |
 | :------ | :------: | :------ |
-| That | This | [] |
-| That | This | [] |
-| That | This | [] |
-| That | This | [] |
-| That | This | [] |
-| That | This | [] |
-| That | This | [] |
-| That | This | [] |
-| That | This | [] |
-| That | This | [] |
+| Word fetched and displayed correctly | The program fetches a word from the designated API and displays it in the HTML page with the correct amount of boxes & if there is an error, the boxes reset & a new word is found | [✔️] |
+| Styles applied correctly | When there is more than one correct letter in the word - the program should identify the position of both letters and apply the style correctly. Additionally - all styles should be updated to represent their current place in the users current guess | [✔️] |
+| Hint fetched and displayed correctly | When the word is fetched, it should be passed into the dictionary API and a hint should be returned and displayed correctly within the HTML file. If not hint is found the program should reset the game and restart the word finding process. | [✔️] |
+| Reset game button displayed correctly | The reset game button should only be displayed once a game is in progress, not at the start of a game | [✔️] |
+| Submit answer button displays user input | Once the user has inputted each guess, the boxes should update the letters inside and their respective style to match their indicators within the game. This should be updated correctly every guess | [✔️] |
+| Need help button displays help correctly | The need help button should hide the help text upon the user entering the page. Only once the user clicks on the button should the text be displayed to the user. Once it is clicked again the text should disappear. | [✔️] |
+| Correct word displayed on wrong answer game over | If the user fails to guess the correct word, the game should update all the styles to grey and the correct word should be displayed in the boxes. Along with text on the page alerting the user that the game has ended. | [✔️] |
+| Correct word displayed on right answer game over | If the user successfully guesses the correct word. The page should display text that alerts them that they have won the game. The correct word should be displayed in the boxes with all green styles. | [✔️] |
+| Attempts update with every guess | On every guess the user inputs. The attempts counter below the game should increment by 1 every time and display this to the user. | [✔️] |
+| Wrong letters updates correctly | Every time a user guesses an incorrect letter, the program should update the wrong letters list on the page. This should only display one of each incorrect letter even if it has been guessed multiple times. | [✔️] |
+
+
 
 ## Validation Results
 
