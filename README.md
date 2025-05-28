@@ -100,6 +100,11 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 ### Bug 006 - Preceeding letter not changing class from yellow if all letters are already correct
 - Bug fix - Added conditional check with an apply list array to check the index of letters that have been over applied and removed the corresponding class - **[Github Commit Link for Code Changes](https://github.com/Ljkkj7/Milestone2/commit/78343eea5e3a2c6fa035423730f62d60bac3f771)**
 
+## Known Bugs/Errors
+
+### 404 GET request - No definition found for word in API
+- The console logs an error of 404 whenever the API can't find a definition for the word it is passed. I implemented a 404 error handler into the fetch request yet the error was still showing in the console so removed the fix as it wasn't suitable.
+
 ## Validation Results
 
 ### W3C HTML Checks
