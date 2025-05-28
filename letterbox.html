@@ -12,6 +12,8 @@
 </head>
 <body>
     <header>
+
+        <!-- Logo and navigation for desktop screens -->
         <div class="navbar">
             <div id="logo">
                 <a href="index.html"><img src="assets/images/KJ.png" alt="Logo" id="logoImage"></a>
@@ -21,7 +23,8 @@
                 <div></div>
                 <div></div>
             </div>
-        
+
+        <!-- Hidden nav menu for mobile screens -->
             <ul class="menulist">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="simon.html">Simon Says</a></li>
@@ -35,17 +38,23 @@
         <h1>LetterBoxed</h1>
         <p>Word Puzzle Game</p>
     </div>
+    <!-- Game Container for LetterBoxed -->
     <div class="gameContainer">
+        <!-- Game Title -->
         <h2>Guess the word</h2>
+        <!-- Game content container -->
         <div class="gameContent">
+            <!-- Hidden Game over messages for DOM manipulation -->
             <div class="gameOverMessage" id="gameOverMessage">
                 <p class="gOTop">Game Over!</p><p>Answer:</p>
             </div>
             <div class="gameOverMessage" id="gameWinMessage">
                 <p class="gOTop">You Win!</p><p>Answer:</p>
             </div>
+            <!-- Empty word boxes div for updating inputted letters -->
             <div class="wordBoxes">
             </div>
+            <!-- Container for game details and user input-->
             <div class="details">
                 <input type="text" id="guessInput" placeholder="Enter your guess here...">
                 <span class="errorMessage" id="errorMessage">Please enter a word containing 5 letters</span>
@@ -54,6 +63,7 @@
                 <p class="attempts">Attempts: <span></span>/6</p>
                 <p class="wrongLetters">Wrong Letters: <span></span></p>
             </div>
+            <!-- Help button with popup -->
             <div class="helpButton">Need help?
                 <div class="helpText" id="helpPopup">
                     <p>Enter a word of 5 letters</p>
@@ -62,9 +72,11 @@
                     <p>If the letter is not in the word, it will be highlighted in grey.</p>
                 </div>
             </div>
+            <!-- Reset button to restart the game -->
             <button class="resetButton">Reset Game</button>
         </div>
     </div>
+    <!-- Scripts for game functionality -->
     <script src="assets/scripts/letterboxed.js"></script>
     <script src="assets/scripts/words.js"></script>
     <footer>
