@@ -158,7 +158,12 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 | Attempts update with every guess | On every guess the user inputs. The attempts counter below the game should increment by 1 every time and display this to the user. | [✔️] |
 | Wrong letters updates correctly | Every time a user guesses an incorrect letter, the program should update the wrong letters list on the page. This should only display one of each incorrect letter even if it has been guessed multiple times. | [✔️] |
 
+#### Contact Page
 
+| Test | Expected Result | Achieved |
+| :------ | :------: | :------ |
+| Contact form is displayed correctly | The contact form should display as a form with 3 fields. Name, Email and Message. The user should be able to submit this form using the submit button at the end of the form - This will take them to a 404 page as this is only a dummy form | [✔️] |
+| Contact form is responsive | The contact form should display correctly and accesibily on all device screens. | [✔️] |
 
 ## Validation Results
 
