@@ -165,6 +165,13 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 | Contact form is displayed correctly | The contact form should display as a form with 3 fields. Name, Email and Message. The user should be able to submit this form using the submit button at the end of the form - This will take them to a 404 page as this is only a dummy form | [✔️] |
 | Contact form is responsive | The contact form should display correctly and accesibily on all device screens. | [✔️] |
 
+#### 404 
+
+| Test | Expected Result | Achieved |
+| :------ | :------: | :------ |
+| 404 box displays correctly | The 404 page should display the correct information needed in a box with a button that redirects the user to the home page. | [✔️] |
+
+
 ## Validation Results
 
 ### W3C HTML Checks
