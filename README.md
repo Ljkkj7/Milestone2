@@ -112,11 +112,38 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
 ### Manual vs Automated testing
 
-#### Manual testing
+| **Aspect**          | **Manual Testing**                                  | **Automated Testing**                                         |
+| ------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
+| **Definition**      | Test cases are executed manually by a human tester. | Test cases are executed by scripts or tools automatically.    |
+| **Speed**           | Slower, especially for repetitive tasks.            | Much faster; suitable for frequent and repeated runs.         |
+| **Accuracy**        | Prone to human error.                               | More reliable and consistent.                                 |
+| **Initial Effort**  | Requires little setup to begin testing.             | High initial setup to write test scripts and configure tools. |
+| **Maintenance**     | Easier short-term; effort grows with complexity.    | Requires ongoing script updates as application changes.       |
+| **Best For**        | Exploratory, usability, ad hoc, and UI testing.     | Regression, load, performance, and large-scale testing.       |
+| **Cost**            | Lower upfront cost but higher over time.            | Higher upfront cost but cost-effective long-term.             |
+| **Tool Dependency** | Minimal or no tools needed.                         | Requires testing frameworks and automation tools.             |
 
-#### Automated testing
+
+### Why Manual Testing?
+
+- I chose manual testing for this project as it helped me build the game incrementally. Using the built in developer tools I was able to log certain points in my code that I wanted to identify which data was being updated & where it was being passed to and in which format it was being passed in.
+
+- Going forward I would choose a blend of automated and manual testing to help with the repetitive automated functions. This will help me easily indentify any logic errors and bugs I have and allow for a speedier development process.
+
 
 ### Tests
+
+#### Landing page
+
+| Test | Expected Result | Achieved |
+| :------ | :------: | :------ |
+| User opens website | The website opens and calls index.html to display the landing page | [✔️] |
+| User views the page on different screen sizes | The layout is responsive and dynamically shifts according to screen size | [✔️] |
+| Image links are displayed correctly | All images are displayed correctly with no broken images or alt text displayed  | [✔️] |
+| Game section buttons pressed | When the user presses on a button in the respective game section, it navigates them to the correct part of the website | [✔️] |
+| Navigation bar responsiveness | The navigation bar shrinks from being displayed at the top of the page to being hidden behind a hamburger menu that displays all options responsively | [✔️] |
+
+#### LetterBoxed
 
 | Test | Expected Result | Achieved |
 | :------ | :------: | :------ |
