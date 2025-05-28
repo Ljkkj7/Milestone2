@@ -67,6 +67,9 @@ async function randomWord() {
     guesses = 0; // Reset guesses for the new word
     attempts.innerText = guesses; // Update attempts display
 
+    if (wordBoxes.children.length > 0) {
+        wordBoxes.innerHTML = ""; // Clear previous word boxes
+    }
     let html = "<div class='letterBox'></div>";
     for (let i = 0; i < word[0].length; i++) {
         wordBoxes.appendChild(document.createElement("div")).innerHTML = html;
