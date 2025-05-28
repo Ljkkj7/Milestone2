@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector(".menulist");
     const navbar = document.querySelector(".navbar");
 
+    // Check if the menu toggle and menu elements exist
     if (!menuToggle || !menu) {
         console.error("ERROR: Menu toggle or menu list not found!");
         return;

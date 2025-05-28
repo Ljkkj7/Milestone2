@@ -63,7 +63,6 @@ async function randomWord() {
     } else {
         hintTag.innerText = hint[0].meanings[0].definitions[0].definition;
     }
-    console.log(hint[0].meanings[0].definitions[0].definition);
 
     guesses = 0; // Reset guesses for the new word
     attempts.innerText = guesses; // Update attempts display

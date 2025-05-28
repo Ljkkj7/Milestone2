@@ -1,3 +1,5 @@
+// This file contains a list of words and their hints for a word guessing game.
+
 let wordList = [
     {
         word: "python",
