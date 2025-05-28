@@ -105,6 +105,9 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 ### 404 GET request - No definition found for word in API
 - The console logs an error of 404 whenever the API can't find a definition for the word it is passed. I implemented a 404 error handler into the fetch request yet the error was still showing in the console so removed the fix as it wasn't suitable.
 
+### Uppercase Image files
+- Some image files imported in the incorrect case format. Upon attempting to refactor the image file names I was thrown an error in VSCode that would'nt allow me to rewrite the file names.
+
 ## Validation Results
 
 ### W3C HTML Checks
