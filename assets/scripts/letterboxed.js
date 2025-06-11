@@ -17,10 +17,11 @@ let wrongLettersList = []; // List to store wrong letters
 let correctLettersList = []; // List to store correct letters
 let mediumLettersList = []; // List to store medium letters
 let guesses = 0; // Number of guesses made
+let localWordSelectOn = true; // Flag to indicate if local word selection is enabled
 
 async function randomWord() {
 
-    
+    localWordSelectOn = false; // Disable local word selection
     wrongLettersList = []; // Reset wrong letters list
     wrongLetters.innerText = ""; // Clear previous wrong letters display
     correctLettersList = []; // Reset correct letters list
@@ -30,14 +31,18 @@ async function randomWord() {
             let response = await fetch("https://random-word-api.herokuapp.com/word?length=5");
             return await response.json();
         } catch (err) {
-            console.log("Error fetching word:", err);
-            randomWordLocal(); // Retry fetching a new word locally if there's an error
-            return []; // Return an empty array to avoid breaking the code
+            console.log("Error fetching word - Using local word list instead");
+            storedWord = randomWordLocal(); // Retry fetching a new word locally if there's an error
+            return storedWord; // Return the stored word to avoid breaking the code
         }
     };
 
     let word = await fetchWord();
-    if (!word || word.length === 0) {
+    if (localWordSelectOn) {
+        let hint = findHintLocal(word); // Fetch hint from local list if local word selection is enabled
+        hintTag.innerText = hint; // Display the hint
+    } else {
+        if (!word || word.length === 0) {
         console.log("No word fetched.");
         randomWord(); // Retry fetching a new word if there's an error
     }
@@ -73,15 +78,15 @@ async function randomWord() {
     let html = "<div class='letterBox'></div>";
     for (let i = 0; i < word[0].length; i++) {
         wordBoxes.appendChild(document.createElement("div")).innerHTML = html;
+    }  
     }
 }
 
 function randomWordLocal() {
+    localWordSelectOn = true; // Enable local word selection
     let randItem = Math.floor(Math.random() * wordList.length);
     word = wordList[randItem].word; // Randomly select a word from the local list
-    hint = wordList[randItem].hint; // Get the corresponding hint
 
-    hintTag.innerText = hint; // Display the hint
     guesses = 0; // Reset guesses for the new word
     attempts.innerText = guesses; // Update attempts display
 
@@ -90,6 +95,16 @@ function randomWordLocal() {
         wordBoxes.appendChild(document.createElement("div")).innerHTML = html;
     }
     return word; // Return the selected word
+}
+
+function findHintLocal(word) {
+    for (let i = 0; i < wordList.length; i++) {
+        if (wordList[i].word === word) {
+            console.log("Hint found for word:", wordList[i].hint); // Log the hint for the given word
+            return wordList[i].hint; // Return the hint for the given word
+        }
+    }
+    return "No hint available"; // Return a default message if no hint is found
 }
 
 function onGuess() {
