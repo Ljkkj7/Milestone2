@@ -100,6 +100,9 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 ### Bug 006 - Preceeding letter not changing class from yellow if all letters are already correct
 - Bug fix - Added conditional check with an apply list array to check the index of letters that have been over applied and removed the corresponding class - **[Github Commit Link for Code Changes](https://github.com/Ljkkj7/Milestone2/commit/78343eea5e3a2c6fa035423730f62d60bac3f771)**
 
+### Bug 007 - Recursive API request loop
+- Bug fix - Implemntation of a flag to break the API request loop and divert the code to use a local backup of words instead. **[Github Commit Link for Code Changes](https://github.com/Ljkkj7/Milestone2/commit/04dc4a9e876cb3f7f861bfec32a6c36966682dfa)**
+
 ## Known Bugs/Errors
 
 ### 404 GET request - No definition found for word in API
