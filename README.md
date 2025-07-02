@@ -260,6 +260,12 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 
 Desktop and laptop screens are displayed identically without adjustments to the navbar through JS manipulation of the DOM to display hamburger menus.
 
+## Browser Testing
+
+- [Safari](assets/images/safaritest.jpg)
+- [Microsoft Edge](assets/images/edgetest.jpg)
+- [Opera/Chromium](assets/images/operatest.jpg)
+
 ### Returning Visitor
 
 #### As a returning visitor, I want to be able to play the same games again consistently without any bugs
