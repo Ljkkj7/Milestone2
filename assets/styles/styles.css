@@ -1,13 +1,16 @@
+/* CSS Reset - Remove default browser styling */
 * {
     margin:0;
     padding:0;
     border:0;
   }
 
+/* Base body styling with custom font */
 body {
     font-family: Figtree, sans-serif;
 }
 
+/* 404 Error Page Container - Centered card with shake animation */
 .fofContainer {
     display: flex;
     justify-content: center;
@@ -22,15 +25,18 @@ body {
     animation: shake 0.5s;
 }
 
+/* 404 Container paragraph styling */
 .fofContainer p {
     font-size: 20px;
     padding: 0px 0px 10px 0px;
 }
 
+/* 404 Container heading styling */
 .fofContainer h2 {
     padding: 0px 0px 20px 0px;
 }
 
+/* 404 Container link button styling with hover effects */
 .fofContainer a {
     text-decoration: none;
     color: #000000;
@@ -41,12 +47,14 @@ body {
     border: 2px solid #000;
 }
 
+/* 404 Container link hover state - inverts colors */
 .fofContainer a:hover, .fofContainer a:active {
     background-color: #000000;
     color: #ffffff;
     transition: 0.6s;
 }
 
+/* Main navigation bar container */
 .navbar {
     width: 100%;
     border-bottom: 2px solid #000;
@@ -55,12 +63,14 @@ body {
     align-items: center;
 }
 
+/* Navigation menu list - removes default list styling */
 .menulist {
     list-style-type: none;
     display: flex;
     align-items: center;
 }
 
+/* Navigation list container with padding and background */
 .navlist {
     display: flex;
     justify-content: space-between;
@@ -70,21 +80,25 @@ body {
     height: 100px;
 }
 
+/* Logo container styling */
 .logo {
     display: inline-flex;
 }
 
+/* Logo image dimensions */
 #logoImage {
     width: 200px;
     height: 125px;
 }
 
+/* Individual menu list items styling */
 .menulist li {
     padding: 45px 45px 45px 20px;
     display: inline-flex;
     text-decoration: none;
 }
 
+/* Menu links base styling */
 .menulist a {
     text-decoration: none;
     color: #000000;
@@ -92,6 +106,7 @@ body {
     margin: 0px 0px 0px 0px;
 }
 
+/* Menu links hover state - creates button-like appearance */
 .menulist a:hover, .menulist a:active {
     color: #ffffff;
     font-weight: 600;
@@ -102,10 +117,12 @@ body {
     
 }
 
+/* Active menu item indicator */
 .menulist .active {
     font-weight: 600;
 }
 
+/* Mobile hamburger menu toggle - hidden by default */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -113,6 +130,7 @@ body {
     padding: 10px;
 }
 
+/* Hamburger menu lines */
 .menu-toggle div {
     width: 30px;
     height: 4px;
@@ -120,6 +138,7 @@ body {
     margin: 5px 0;
 }
 
+/* Main footer container */
 footer {
     display: flex;
     justify-content: center;
@@ -129,6 +148,7 @@ footer {
     border-top: 2px solid #000;
 }
 
+/* Footer content wrapper with border */
 .footer {
     border-radius: 20px;
     border: 2px solid #000;
@@ -136,12 +156,14 @@ footer {
     max-width: fit-content;
 }
 
+/* Footer paragraph text styling */
 .footer p {
     text-align: center;
     padding: 5px 0px 5px 0px;
     font-size: 20px;
 }
 
+/* Social media links container in footer */
 .footer .socials {
     display: flex;
     justify-content: center;
@@ -150,12 +172,14 @@ footer {
     font-weight: 600;
 }
 
+/* Individual social media links */
 .footer .socials a {
     text-decoration: none;
     color: #000000;
     padding: 0px 10px 0px 10px;
 }
 
+/* Social media links hover state */
 .footer .socials a:hover, .footer .socials a:active {
     color: #ffffff;
     font-weight: 600;
@@ -165,16 +189,19 @@ footer {
     transition: 0.6s;
 }
 
+/* Main content area background */
 .contents {
     background-color: #1bb2946b;
 }
 
+/* Main content headings */
 .contents h1 {
     font-size: 50px;
     text-align: center;
     padding: 20px 0px 20px 0px;
 }
 
+/* Game-specific content headings with background */
 .gameContents h1 {
     font-size: 50px;
     text-align: center;
@@ -184,6 +211,7 @@ footer {
     border-radius: 20px;
 }
 
+/* Game content section container */
 .gameContents {
     display: flex;
     justify-content: center;
@@ -193,6 +221,7 @@ footer {
     border-bottom: 2px solid #000;
 }
 
+/* Game content paragraphs with semi-transparent background */
 .gameContents p {
     font-size: 20px;
     text-align: center;
@@ -201,6 +230,7 @@ footer {
     border-radius: 20px;
 }
 
+/* Simon game background styling with image overlay */
 #simon {
     background-image: url(assets/images/simonBG.png);
     background-size: cover;
@@ -210,6 +240,7 @@ footer {
     background-blend-mode: lighten;
 }
 
+/* Letterbox game background styling with image at bottom */
 #letterbox {
     background-image: url(assets/images/letterboxedBG.png);
     background-size: contain;
@@ -219,6 +250,7 @@ footer {
     background-blend-mode: lighten;
 }
 
+/* Main content container for pages */
 .mainContents {
     display: flex;
     justify-content: center;
@@ -230,6 +262,7 @@ footer {
     border-bottom: 2px solid #000;
 }
 
+/* Play button styling with brand colors */
 .playButton {
     background-color: #1bb29486;
     border: 2px solid #000;
@@ -241,12 +274,14 @@ footer {
     text-decoration: none;
 }
 
+/* Play button hover effect */
 .playButton:hover, .playButton:active {
     background-color: #ffffff;
     color: #000000;
     transition: 0.6s;
 }
 
+/* Game suggestion section container */
 .suggestContents {
     display: flex;
     justify-content: center;
@@ -256,6 +291,7 @@ footer {
     background-color: #ffffff;
 }
 
+/* Suggestion section headings */
 .suggestContents h1 {
     font-size: 50px;
     text-align: center;
@@ -263,17 +299,20 @@ footer {
     margin: 20px 0px 20px 0px;
 }
 
+/* Suggestion paragraph with specific spacing */
 .suggestionParagraph {
     font-size: 20px;
     text-align: center;
     padding: 0px 0px 20px 0px;
 }
 
+/* General suggestion content paragraphs */
 .suggestContents p {
     font-size: 20px;
     text-align: center;
 }
 
+/* Suggestion button with inverted colors from play button */
 .suggestButton {
     background-color: #ffffff;
     border: 2px solid #000;
@@ -285,12 +324,14 @@ footer {
     text-decoration: none;
 }
 
+/* Suggestion button hover - becomes dark */
 .suggestButton:hover, .suggestButton:active {
     background-color: #000000;
     color: #ffffff;
     transition: 0.6s;
 }
 
+/* Generic container for various content sections */
 .container {
     display: flex;
     flex-direction: column;
@@ -299,6 +340,7 @@ footer {
     padding: 0px 0px 40px 0px;
 }
 
+/* Container main headings */
 .container h1 {
     font-weight: 300;
     margin-bottom: 15px;
@@ -306,6 +348,7 @@ footer {
     text-align: center;
 }
 
+/* Container sub-headings */
 .container h2 {
     font-weight: 200;
     margin-top: 15px;
@@ -314,6 +357,7 @@ footer {
     text-align: center;
 }
 
+/* Simon game circle container - holds all colored circles */
 .circlecontainer {
     position: relative;
     display: flex;
@@ -325,6 +369,7 @@ footer {
     max-height: 500px;
 }
 
+/* Base circle styling for Simon game */
 .circle {
     border: 2px solid black;
     display: flex;
@@ -334,12 +379,14 @@ footer {
     cursor: pointer;
 }
 
+/* Outermost circle - Blue */
 .circle1 {
     height: 500px;
     width: 500px;
     background-color: #009FE3;
 }
 
+/* Second circle - Dark gray */
 .circle2 {
     height: 400px;
     width: 400px;
@@ -348,6 +395,7 @@ footer {
     left: 50px;
 }
 
+/* Third circle - Yellow */
 .circle3 {
     height: 300px;
     width: 300px;
@@ -356,6 +404,7 @@ footer {
     left: 100px;
 }
 
+/* Innermost circle - Teal */
 .circle4 {
     height: 200px;
     width: 200px;
@@ -364,6 +413,7 @@ footer {
     left: 150px;
 }
 
+/* Score display box in center of Simon game */
 .scorebox {
     border: 2px solid black;
     border-radius: 25%;
@@ -380,6 +430,7 @@ footer {
     font-size: 3em;
 }
 
+/* Simon game control button */
 .simonButton {
     display: flex;
     flex-direction: column;
@@ -396,12 +447,14 @@ footer {
     border: 2px solid #000000;
 }
 
+/* Simon button hover effect */
 .simonButton:hover {
     color: #ffffff;
     background-color: #000000;
     transition: 0.6s;
 }
 
+/* Score display container */
 .scorecontainer {
     display: flex;
     flex-direction: row;
@@ -410,19 +463,23 @@ footer {
     margin: 20px auto 20px auto;
 }
 
+/* Current score display */
 .score {
     font-size: 1em;
 }
 
+/* High score display */
 .highscore {
     display: inline-block;
     font-size: 1em;
 }
 
+/* Light class - makes elements semi-transparent */
 .light {
     opacity: 0.2;
 }
 
+/* Contact page content container */
 .contactContents {
     display: flex;
     justify-content: center;
@@ -433,6 +490,7 @@ footer {
     border-bottom: 2px solid #000;
 }
 
+/* Contact form container with shadow and animation */
 .formContainer {
     display: flex;
     flex-direction: column;
@@ -446,10 +504,12 @@ footer {
     animation: contact-zoom 1s forwards;
 }
 
+/* Form input labels styling */
 .labelIn {
     padding: 10px 10px 10px 10px;
 }
 
+/* Form labels and buttons layout */
 .formContainer label, .formContainer button {
     display: flex;
     flex-direction: column;
@@ -459,27 +519,32 @@ footer {
     margin: 0 auto;
 }
 
+/* Form inputs and textareas styling */
 .formContainer input, .formContainer textarea {
     border: 2px solid black;
     border-radius: 20px;
 }
 
+/* Textarea specific padding */
 .formContainer textarea {
     padding: 5px 10px 5px 10px;
 }
 
+/* Form submit button styling */
 .formContainer button {
     border: 2px solid #000;
     padding: 5px 5px 5px 5px;
     border-radius: 10px;
 }
 
+/* Form button hover effect */
 .formContainer button:hover {
     background-color: #000;
     color: #fff;
     transition: 0.6s;
 }
 
+/* Game page title section */
 .gameTitle {
     font-size: 50px;
     text-align: center;
@@ -488,15 +553,18 @@ footer {
     background-color: #1bb29486;
 }
 
+/* Game title heading with zoom animation */
 .gameTitle h1 {
     animation: contact-zoom 1s forwards;
 }
 
+/* Game title paragraph with zoom animation */
 .gameTitle p {
     animation: contact-zoom 1s forwards;
     padding-bottom: 20px;
 }
 
+/* Individual game container */
 .gameContainer {
     display: flex;
     justify-content: center;
@@ -508,6 +576,7 @@ footer {
     border-bottom: 2px solid #000;
 }
 
+/* Game container sub-headings */
 .gameContainer h2 {
     font-size: 30px;
     text-align: center;
@@ -515,6 +584,7 @@ footer {
     margin: 20px 0px 20px 0px;
 }
 
+/* Game over message overlay - hidden by default */
 .gameOverMessage {
     visibility: hidden;
     position: absolute;
@@ -523,6 +593,7 @@ footer {
     transform: translate(-50%, 50%);
 }
 
+/* Game over message text styling */
 .gameOverMessage p {
     font-size: 60px;
     text-align: center;
@@ -536,15 +607,18 @@ footer {
     border: 2px solid #000000;
 }
 
+/* Larger text for main game over message */
 .gameOverMessage .gOTop {
     font-size: 80px;
 }
 
+/* Show game over message with fade-in animation */
 .gameOverMessage.show {
     visibility: visible;
     animation: fadeIn 0.5s;
 }
 
+/* Error message overlay - hidden by default */
 .errorMessage {
     visibility: hidden;
     position: absolute;
@@ -559,11 +633,13 @@ footer {
     border-radius: 10px;
 }
 
+/* Show error message with shake animation */
 .errorMessage.show {
     visibility: visible;
     animation: shake 0.5s;
 }
 
+/* Shake animation keyframes for error states */
 @keyframes shake {
     0% { transform: translateX(0); }
     20% { transform: translateX(-10px); }
@@ -573,6 +649,7 @@ footer {
     100% { transform: translateX(0); }
   }
 
+/* Game details section */
 .details {
     font-size: 20px;
     text-align: center;
@@ -580,10 +657,12 @@ footer {
     margin: 20px 0px 20px 0px;
 }
 
+/* Details section paragraphs */
 .details p {
     padding-top: 20px;
 }
 
+/* Details section input fields */
 .details input {
     border: 2px solid black;
     border-radius: 20px;
@@ -592,11 +671,13 @@ footer {
     text-align: center;
 }
 
+/* Input focus state with brand color border */
 .details input:focus {
     outline: none;
     border: 2px solid #1bb29486;
 }
 
+/* Guess button for word games */
 .guessButton {
     display: flex;
     background-color: #1bb29486;
@@ -610,12 +691,14 @@ footer {
     flex-direction: column;
 }
 
+/* Word boxes container for word game */
 .gameContent .wordBoxes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Reset button - hidden by default */
 .resetButton {
     display: none;
     flex-direction: row;
@@ -629,6 +712,7 @@ footer {
     text-decoration: none;
 }
 
+/* Help button with tooltip functionality */
 .helpButton {
     display: flex;
     flex-direction: row;
@@ -646,6 +730,7 @@ footer {
     cursor: pointer;
 }
 
+/* Help tooltip text - hidden by default */
 .helpButton .helpText {
     visibility: hidden;
     position: absolute;
@@ -653,6 +738,7 @@ footer {
     bottom: 10%;
 }
 
+/* Help tooltip text styling */
 .helpButton .helpText p {
     background-color: #000000;
     color: #ffffff;
@@ -664,11 +750,13 @@ footer {
     width: fit-content;
 }
 
+/* Show help tooltip with fade animation */
 .helpButton .show {
     visibility: visible;
     animation: fadeIn 1s;
 }
 
+/* Help tooltip arrow pointer */
 .helpButton .helpText::after {
     content: "";
     position: absolute;
@@ -681,17 +769,20 @@ footer {
     border-color: #afafaff5 transparent transparent transparent;
 }
 
+/* Fade-in animation keyframes */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
 
+/* Hover effects for game buttons */
 .resetButton:active, .resetButton:hover, .guessButton:hover, .guessButton:active, .helpButton:hover, .helpButton:active {
     background-color: #000000;
     color: #ffffff;
     transition: 0.6s;
 }
 
+/* Word boxes container for letter grid */
 .wordBoxes {
     display: flex;
     flex-wrap: wrap;
@@ -701,6 +792,7 @@ footer {
     margin: 0px auto 20px auto;
 }
 
+/* Individual letter box styling - default state */
 .wordBoxes .letterBox{
     display: flex;
     height: 57px;
@@ -717,10 +809,12 @@ footer {
     border: 1px solid #B5B5B5;
 }
 
+/* Remove left margin from first letter box */
 .wordBoxes .letterBox:first-child{
     margin-left: 0px;
 }
 
+/* Green letter box - correct letter in correct position */
 .green {
     display: flex;
     height: 57px;
@@ -738,6 +832,7 @@ footer {
     border: 1px solid #000000;
 }
 
+/* Yellow letter box - correct letter in wrong position */
 .yellow {
     display: flex;
     height: 57px;
@@ -755,6 +850,7 @@ footer {
     border: 1px solid #000000;
 }
 
+/* Grey letter box - letter not in word */
 .grey {
     display: flex;
     height: 57px;
@@ -772,22 +868,26 @@ footer {
     border: 1px solid #000000;
 }
 
-
+/* Contact zoom animation keyframes */
 @keyframes contact-zoom {
     from { transform: scale(0.9); }
     to { transform: scale(1); }
 }
 
+/* Tablet responsive styles */
 @media screen and (max-width: 768px) {
+    /* Stack navbar vertically on tablets */
     .navbar {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Show hamburger menu on tablets */
     .menu-toggle {
         display: flex;
     }
 
+    /* Hide menu by default on tablets */
     .menulist {
         display: none;
         flex-direction: column;
@@ -802,6 +902,7 @@ footer {
         border-radius: 20px;
     }
 
+    /* Show mobile menu when toggled */
     .menulist.show {
         display: flex !important;
         position: absolute;
@@ -811,6 +912,7 @@ footer {
         animation: fadeIn 0.5s;
     }
 
+    /* Mobile menu items styling */
     .menulist li {
         padding: 10px 10px 10px 10px;
         margin: 10px 0px 10px 0px;
@@ -819,16 +921,19 @@ footer {
         background-color: #ffffff;
     }
 
+    /* Mobile menu link hover states */
     .menulist li a:hover, .menulist li a:active {
         background-color: #ffffff00;
         color: #000000;
         transition: 0.6s;
     }
 
+    /* Larger game title on tablets */
     .gameTitle h1 {
         font-size: 60px;
     }
 
+    /* Adjust game over message position for tablets */
     .gameOverMessage {
         left: 50%;
         bottom: 55%;
@@ -836,6 +941,7 @@ footer {
         width: 100%;
     }
 
+    /* Smaller game over text on tablets */
     .gameOverMessage p {
         font-size: 55px;
     }
@@ -845,16 +951,20 @@ footer {
     }
 }
 
+/* Mobile phone responsive styles */
 @media screen and (max-width: 480px) {
+    /* Stack navbar vertically on mobile */
     .navbar {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Show hamburger menu on mobile */
     .menu-toggle {
         display: flex;
     }
 
+    /* Hide menu by default on mobile */
     .menulist {
         display: none;
         flex-direction: column;
@@ -869,6 +979,7 @@ footer {
         border-radius: 20px;
     }
 
+    /* Wider mobile menu */
     .menulist.show {
         display: flex !important;
         position: absolute;
@@ -878,6 +989,7 @@ footer {
         animation: fadeIn 0.5s;
     }
 
+    /* Mobile menu items */
     .menulist li {
         padding: 10px 10px 10px 10px;
         margin: 10px 0px 10px 0px;
@@ -886,26 +998,31 @@ footer {
         background-color: #ffffff;
     }
 
+    /* Mobile menu link states */
     .menulist li a:hover, .menulist li a:active {
         background-color: #ffffff00;
         color: #000000;
         transition: 0.6s;
     }
 
+    /* Smaller game title on mobile */
     .gameTitle h1 {
         font-size: 50px;
     }
 
+    /* Smaller game title paragraph on mobile */
     .gameTitle p {
         font-size: 25px;
     }
 
+    /* Smaller Simon game circles for mobile */
     .circlecontainer {
         height: 300px;
         max-width: 300px;
         max-height: 300px;
     }
 
+    /* Resize all circles for mobile */
     .circle {
         border: 2px solid black;
         height: 300px;
@@ -933,6 +1050,7 @@ footer {
         left: 90px;
     }
 
+    /* Smaller score box for mobile */
     .scorebox {
         border: 2px solid black;
         height: 60px;
@@ -943,6 +1061,7 @@ footer {
         position: absolute;
     }
 
+    /* Smaller Simon button for mobile */
     .simonButton {
         height: 30px;
         width: 120px;
@@ -950,14 +1069,17 @@ footer {
         margin: 5% auto;
     }
 
+    /* Adjust help tooltip position for mobile */
     .helpButton .helpText {
         bottom: -5%;
     }
 
+    /* Adjust error message position for mobile - full width */
     .errorMessage {
         left: 0%;
     }
 
+    /* Adjust game over message for mobile screens */
     .gameOverMessage {
         left: 50%;
         bottom: 65%;
@@ -965,6 +1087,7 @@ footer {
         width: 100%;
     }
 
+    /* Mobile game over message text sizes */
     .gameOverMessage p {
         font-size: 55px;
     }
