@@ -28,7 +28,7 @@ async function randomWord() {
 
     const fetchWord = async () => {
         try {
-            let response = await fetch("https://random-word-api.herokuapp.com/word?length=5");
+            let response = await fetch("https://random-word-api.vercel.app/api?words=1&length=5");
             return await response.json();
         } catch (err) {
             console.log("Error fetching word - Using local word list instead");
