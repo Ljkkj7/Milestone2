@@ -111,6 +111,12 @@ The primary colours are `1BB295`, `#FFFFFF` and `#000000`
 ### Uppercase Image files
 - Some image files imported in the incorrect case format. Upon attempting to refactor the image file names I was thrown an error in VSCode that would'nt allow me to rewrite the file names.
 
+### Uppercase Image files 2
+- After using a powershell script to rename all files to lowercase - I was able to run around the VSCode error but github still shows the original formatting. Screenshot links provided for actual file names below
+[File rename evidence #1](assets/images/filerename1.jpg)
+[File rename evidence #2](assets/images/filerename2.jpg)
+[File rename evidence #3](assets/images/filerename3.jpg)
+
 ## Manual/Automated Testing
 
 ### Manual vs Automated testing
